@@ -14,6 +14,6 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
-<div style={{ fontSize: "15px" }}>🛠 Technical Skills</div>
+<div style={{ fontSize: "30px" }}>🛠 Technical Skills</div>
 <br />
 <img src="https://img.shields.io/badge/Javascript-F7DF1E?style=for-the-badge&logo=Javascript&logoColor=black">
