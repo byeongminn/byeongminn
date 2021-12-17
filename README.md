@@ -1,4 +1,4 @@
-### Hi there 👋
+### 👋 프론트엔드 개발자 전병민입니다.
 
 <!--
 **byeongminn/byeongminn** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
@@ -14,3 +14,5 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
+🛠 Technical Skills
+<img src="https://img.shields.io/badge/Javascript-F7DF1E?style=for-the-badge&logo=Javascript&logoColor=black">
