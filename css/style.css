@@ -12,12 +12,19 @@ body {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
+    font-family: "Poppins", sans-serif;
     color: #212529;
     background-color: #fff;
 }
 
-img, svg {
+img, svg, i {
     vertical-align: middle;
+}
+
+.section-title {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
 }
 
 /* nav */
@@ -28,7 +35,6 @@ img, svg {
     left: 0;
     right: 0;
     z-index: 1030;
-    font-family: "Poppins", sans-serif;
 }
 
 .navbar .container > a {
@@ -70,6 +76,14 @@ img, svg {
     border-radius: 50px;
 }
 
+.home .row {
+    align-items: center;
+}
+
+.home .mention {
+    margin-left: 1.5rem;
+}
+
 .home .mention h1 {
     font-size: 2.625rem;
     font-weight: 600;
@@ -82,6 +96,8 @@ img, svg {
 }
 
 .home .sns {
+    margin-top: 1.5rem;
+    margin-left: 1.5rem;
     font-size: 2.5rem;
 }
 
@@ -99,4 +115,89 @@ img, svg {
 
 .home .sns .icons-item:hover {
     background-color: #8aacc8;
+}
+
+/* about */
+
+.about {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.about .about-title {
+    display: inline-block;
+    width: 150px;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.about .about-info {
+    display: inline-block;
+    font-size: 1.25rem;
+}
+
+@media (max-width: 1399.98px) {
+    .home .mention h1 {
+        font-size: 2.325rem;
+    }
+    
+    .home .mention h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 1299.98px) {
+    .home .mention h1 {
+        font-size: 1.825rem;
+    }
+    
+    .home .mention h2 {
+        font-size: 1.25rem;
+    }
+
+    .about .about-title {
+        font-size: 1.25rem;
+    }
+
+    .about .about-info {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .home .Jeon__pic {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .home .mention {
+        margin: 0;
+        text-align: center;
+    }
+
+    .home .mention h1 {
+        font-size: 2.2rem;
+    }
+    
+    .home .mention h2 {
+        font-size: 1.5rem;
+    }
+
+    .home .sns {
+        text-align: center;
+        margin-top: 3rem;
+        margin-left: 0;
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .home .mention h1 {
+        font-size: 1.625rem;
+    }
+    
+    .home .mention h2 {
+        font-size: 1rem;
+    }
 }
