@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+}
+
+img, svg {
+    vertical-align: middle;
+}
+
+/* nav */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1030;
+    font-family: "Poppins", sans-serif;
+}
+
+.navbar .container > a {
+    font-size: 1.625rem;
+    font-weight: 900;
+}
+
+.navbar .container > a span {
+    color: #fff;
+}
+
+.navbar-brand {
+    position: relative;
+}
+
+.navbar-brand:after {
+    position: absolute;
+    top: 50%;
+    left: -16px;
+    transform: translate(0, -50%);
+    width: 50px;
+    height: 50px;
+    content: '';
+    background: #3e64ff;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+/* home */
+
+.home {
+    margin-top: 15rem;
+    padding-bottom: 17.5rem;
+}
+
+.home .Jeon__pic img {
+    width: 400px;
+    height: 400px;
+    border-radius: 50px;
+}
+
+.home .mention h1 {
+    font-size: 2.625rem;
+    font-weight: 600;
+}
+
+.home .mention h2 {
+    font-size: 1.625rem;
+    font-weight: 600;
+    line-height: 1.8;
+}
+
+.home .sns {
+    font-size: 3rem;
+}
+
+.home .sns i:hover {
+    cursor: pointer;
+}
