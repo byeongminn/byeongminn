@@ -82,9 +82,21 @@ img, svg {
 }
 
 .home .sns {
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
-.home .sns i:hover {
+.home .sns .icons-item {
+    display: inline-block;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: #4d475c;
+    color: #fff;
+    text-align: center;
+    transition: all 0.2s;
     cursor: pointer;
+}
+
+.home .sns .icons-item:hover {
+    background-color: #8aacc8;
 }
