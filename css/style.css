@@ -137,7 +137,40 @@ img, svg, i {
     font-size: 1.25rem;
 }
 
+/* skills */
+
+.skills {
+    padding: 5rem 0;
+}
+
+.skills .skills-mention {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.skills .skills-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.skills .skills-icons li {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skills .skills-icons li img {
+    width: 48px;
+    height: 48px;
+}
+
 @media (max-width: 1399.98px) {
+
+    /* home */
+
     .home .mention h1 {
         font-size: 2.325rem;
     }
@@ -148,6 +181,9 @@ img, svg, i {
 }
 
 @media (max-width: 1299.98px) {
+
+    /* home */
+
     .home .mention h1 {
         font-size: 1.825rem;
     }
@@ -166,6 +202,9 @@ img, svg, i {
 }
 
 @media (max-width: 991.98px) {
+
+    /* home */
+
     .home .Jeon__pic {
         text-align: center;
         margin-bottom: 3rem;
@@ -190,14 +229,43 @@ img, svg, i {
         margin-left: 0;
         font-size: 2.5rem;
     }
+
+    /* skills */
+
+    .skills .skills-icons li {
+        margin-left: .5rem;
+        margin-right: .5rem;
+    }
 }
 
 @media (max-width: 767.98px) {
+
+    /* home */
+
     .home .mention h1 {
         font-size: 1.625rem;
     }
     
     .home .mention h2 {
         font-size: 1rem;
+    }
+
+    /* skills */
+
+    .skills .skills-mention {
+        font-size: 1.2rem;
+    }
+
+    .skills .skills-icons li img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .skills .skills-icons li {
+        margin-left: .15rem;
+        margin-right: .15rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
