@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles_default.css">
     <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -36,11 +38,14 @@
                     <li class="nav-item mx-2">
                         <a class="nav-link" href="#skills">Skills</a>
                     </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#projects">Project</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <section class="home pt-5" id="home">
+    <section class="home" id="home">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
@@ -133,45 +138,504 @@
                         <h2 class="text-center">Skills</h2>
                     </div>
                 </div>
-            
                 <div class="col-lg-12 text-center">
                     <p class="skills-mention">기본적인 백엔드의 역할도 수행할 수 있는 프론트엔드 개발자</p>
                     <ul class="skills-icons">
                         <i class="fas fa-quote-left"></i>
                         <li>
-                            <img class="img-fluid" src="images/html5-icon.png" alt="html">
+                            <img class="img-fluid" src="images/skills-icons/html5-icon.png" alt="html">
                             <p>html5</p>
                         </li>
                         <li>
-                            <img class="img-fluid" src="images/css3-icon.png" alt="css">
+                            <img class="img-fluid" src="images/skills-icons/css3-icon.png" alt="css">
                             <p>css3</p>
                         </li>
                         <li>
-                            <img class="img-fluid" src="images/scss-icon.png" alt="scss">
+                            <img class="img-fluid" src="images/skills-icons/scss-icon.png" alt="scss">
                             <p>scss</p>
                         </li>
                         <li>
-                            <img class="img-fluid" src="images/javascript-icon.png" alt="javascript">
+                            <img class="img-fluid" src="images/skills-icons/javascript-icon.png" alt="javascript">
                             <p>javascript</p>
                         </li>
                         <li>
-                            <img class="img-fluid" src="images/react-icon.png" alt="react">
+                            <img class="img-fluid" src="images/skills-icons/react-icon.png" alt="react">
                             <p>react</p>
                         </li>
                         <li>
-                            <img class="img-fluid" src="images/nodejs-icon.png" alt="node.js">
+                            <img class="img-fluid" src="images/skills-icons/nodejs-icon.png" alt="node.js">
                             <p>node.js</p>
                         </li>
                         <li>
-                            <img class="img-fluid" src="images/mongodb-icon.png" alt="mongodb icon">
+                            <img class="img-fluid" src="images/skills-icons/mongodb-icon.png" alt="mongodb icon">
                             <p>mongoDB</p>
                         </li>
                         <li>
-                            <img class="img-fluid" src="images/firebase-icon.png" alt="firebase icon">
+                            <img class="img-fluid" src="images/skills-icons/firebase-icon.png" alt="firebase icon">
                             <p>firebase</p>
                         </li>
                         <i class="fas fa-quote-right"></i>
                     </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="projects" id="projects">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h2 class="text-center">Projects</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-subtitle">
+                        <h2 class="text-center"># 개인 프로젝트</h2>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="personal-project-item" data-bs-toggle="modal" data-bs-target="#HtmlCssModal">
+                        <div class="personal-project-content">
+                            <p class="personal-project-title text-center">HTML-CSS</p>
+                            <p class="personal-project-period text-center">2021.10 ~</p>
+                            <p class="personal-project-skill text-center">[HTML, CSS]</p>
+                        </div>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="HtmlCssModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">HTML-CSS</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div id="carouselHtmlCssIndicators" class="carousel slide" data-bs-ride="carousel">
+                                        <div class="carousel-indicators">
+                                            <button type="button" data-bs-target="#carouselHtmlCssIndicators" data-bs-slide-to="0" class="active"
+                                                aria-current="true" aria-label="Slide 1"></button>
+                                            <button type="button" data-bs-target="#carouselHtmlCssIndicators" data-bs-slide-to="1"
+                                                aria-label="Slide 2"></button>
+                                            <button type="button" data-bs-target="#carouselHtmlCssIndicators" data-bs-slide-to="2"
+                                                aria-label="Slide 3"></button>
+                                            <button type="button" data-bs-target="#carouselHtmlCssIndicators" data-bs-slide-to="3"
+                                                aria-label="Slide 4"></button>
+                                        </div>
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img src="images/projects/html-css/Agency.PNG" class="d-block w-100" alt="Agency">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="images/projects/html-css/Yabin.PNG" class="d-block w-100" alt="Yabin">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="images/projects/html-css/Elma.PNG" class="d-block w-100" alt="Elma">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="images/projects/html-css/Patrix.PNG" class="d-block w-100" alt="Patrix">
+                                            </div>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselHtmlCssIndicators"
+                                            data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#carouselHtmlCssIndicators"
+                                            data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
+                                    <p class="personal-project-skill-modal">사용 스택 : HTML, CSS</p>
+                                    <p class="personal-project-info-modal">
+                                        웹의 가장 기본이 되는 HTML과 CSS를 꾸준히 연습하여 보다 더 나은 실력으로
+                                         발전하는 것이 목표입니다. 반응형 웹으로 만들어 데스크톱의 환경만이 아닌
+                                         모바일의 환경에서도 지원이 가능합니다.
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="https://github.com/byeongminn/HTML-CSS" class="btn btn-primary">깃허브로 이동</a>
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="personal-project-item" data-bs-toggle="modal" data-bs-target="#covid19TrackerModal">
+                        <div class="personal-project-content">
+                            <p class="personal-project-title text-center">Covid-19-Tracker</p>
+                            <p class="personal-project-period text-center">2021.07.26 ~ 2021.07.28</p>
+                            <p class="personal-project-skill text-center">[React]</p>
+                        </div>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="covid19TrackerModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Covid-19-Tracker</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div id="carouselCovidIndicators" class="carousel slide" data-bs-ride="carousel">
+                                        <div class="carousel-indicators">
+                                            <button type="button" data-bs-target="#carouselCovidIndicators" data-bs-slide-to="0" class="active"
+                                                aria-current="true" aria-label="Slide 1"></button>
+                                            <button type="button" data-bs-target="#carouselCovidIndicators" data-bs-slide-to="1"
+                                                aria-label="Slide 2"></button>
+                                        </div>
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img src="images/projects/covid-19-tracker/landing.PNG" class="d-block w-100" alt="landing">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="images/projects/covid-19-tracker/country-select.PNG" class="d-block w-100" alt="country select">
+                                            </div>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselCovidIndicators"
+                                            data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#carouselCovidIndicators"
+                                            data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
+                                    <p class="personal-project-skill-modal">사용 스택 : React</p>
+                                    <p class="personal-project-info-modal">
+                                        Covid-19-Tracker는 전세계의 코로나 현황을 지도와 표, 그래프를 통해 시각적으로
+                                         쉽게 파악할 수 있도록 하는 것이 목표입니다. 또한 알고자 하는 나라를 클릭하여
+                                         그 나라에 대한 코로나 현황도 파악할 수 있습니다. 프로젝트를 진행하며
+                                         React Hook에 대한 기본적인 지식을 배우고, fetch 함수에 대해 공부했습니다.
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="https://github.com/byeongminn/covid-19-tracker" class="btn btn-primary">깃허브로 이동</a>
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="personal-project-item" data-bs-toggle="modal" data-bs-target="#YoutubeModal">
+                        <div class="personal-project-content">
+                            <p class="personal-project-title text-center">Youtube Clone</p>
+                            <p class="personal-project-period text-center">2021.08.25 ~ 2021.08.31</p>
+                            <p class="personal-project-skill text-center">[React, Redux, MongoDB, Express, Node]</p>
+                        </div>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="YoutubeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Youtube Clone</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div id="carouselYoutubeCloneIndicators" class="carousel slide" data-bs-ride="carousel">
+                                        <div class="carousel-indicators">
+                                            <button type="button" data-bs-target="#carouselYoutubeCloneIndicators" data-bs-slide-to="0" class="active"
+                                                aria-current="true" aria-label="Slide 1"></button>
+                                            <button type="button" data-bs-target="#carouselYoutubeCloneIndicators" data-bs-slide-to="1"
+                                                aria-label="Slide 2"></button>
+                                            <button type="button" data-bs-target="#carouselYoutubeCloneIndicators" data-bs-slide-to="2"
+                                                aria-label="Slide 3"></button>
+                                            <button type="button" data-bs-target="#carouselYoutubeCloneIndicators" data-bs-slide-to="3"
+                                                aria-label="Slide 4"></button>
+                                            <button type="button" data-bs-target="#carouselYoutubeCloneIndicators" data-bs-slide-to="4"
+                                                aria-label="Slide 5"></button>
+                                        </div>
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img src="images/projects/youtube-clone/landing.PNG" class="d-block w-100" alt="landing">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="images/projects/youtube-clone/video.PNG" class="d-block w-100" alt="video page">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="images/projects/youtube-clone/comment.PNG" class="d-block w-100" alt="comment">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="images/projects/youtube-clone/upload.PNG" class="d-block w-100" alt="video upload">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="images/projects/youtube-clone/subscription.PNG" class="d-block w-100" alt="subscription">
+                                            </div>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselYoutubeCloneIndicators"
+                                            data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#carouselYoutubeCloneIndicators"
+                                            data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
+                                    <p class="personal-project-skill-modal">사용 스택 : React, Redux, MongoDB, Express, node.js</p>
+                                    <p class="personal-project-info-modal">
+                                        Youtube의 핵심 기능인 영상 시청과 댓글 기능, 좋아요와 싫어요 기능, 구독 기능,
+                                         영상 업로드 기능을 클론 코딩함으로써 React 프레임워크를 사용한 개발 능력을
+                                         향상시켰고, Redux에 대한 기본적인 지식을 배웠습니다. 또한 MongoDB, Express
+                                         Node.js를 사용해 서버를 직접 구축함으로써 서버에 대한 지식과 백엔드와 프론트엔드
+                                         사이의 상호작용을 직접 경험해 볼 수 있었습니다.
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="https://github.com/byeongminn/youtube_clone" class="btn btn-primary">깃허브로 이동</a>
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="personal-project-item" data-bs-toggle="modal" data-bs-target="#ShoppingmallModal">
+                        <div class="personal-project-content">
+                            <p class="personal-project-title text-center">ShoppingMall Clone</p>
+                            <p class="personal-project-period text-center">2021.09.13 ~ 2021.09.16</p>
+                            <p class="personal-project-skill text-center">[React, Redux, MongoDB, Express, Node]</p>
+                        </div>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="ShoppingmallModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Youtube Clone</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div id="carouselShopIndicators" class="carousel slide" data-bs-ride="carousel">
+                                        <div class="carousel-indicators">
+                                            <button type="button" data-bs-target="#carouselShopIndicators" data-bs-slide-to="0" class="active"
+                                                aria-current="true" aria-label="Slide 1"></button>
+                                            <button type="button" data-bs-target="#carouselShopIndicators" data-bs-slide-to="1"
+                                                aria-label="Slide 2"></button>
+                                            <button type="button" data-bs-target="#carouselShopIndicators" data-bs-slide-to="2"
+                                                aria-label="Slide 3"></button>
+                                            <button type="button" data-bs-target="#carouselShopIndicators" data-bs-slide-to="3"
+                                                aria-label="Slide 4"></button>
+                                        </div>
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img src="images/projects/shoppingmall-clone/landing.PNG" class="d-block w-100" alt="landing">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="images/projects/shoppingmall-clone/detail.PNG" class="d-block w-100" alt="detail page">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="images/projects/shoppingmall-clone/upload.PNG" class="d-block w-100" alt="upload">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="images/projects/shoppingmall-clone/cart.PNG" class="d-block w-100" alt="cart">
+                                            </div>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselShopIndicators"
+                                            data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#carouselShopIndicators"
+                                            data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
+                                    <p class="personal-project-skill-modal">사용 스택 : React, Redux, MongoDB, Express, node.js</p>
+                                    <p class="personal-project-info-modal">
+                                        인터넷 쇼핑몰을 클론 코딩하면서 계속해서 React와 다른 기술 스택들에 대한 기억을
+                                         상기시키고 더욱 더 보완했으며, 원하는 npm 모듈을 찾아서 적극적으로 사용하게
+                                         되었습니다.
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="https://github.com/byeongminn/shoppingMall_clone" class="btn btn-primary">깃허브로 이동</a>
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-subtitle">
+                        <h2 class="text-center"># 팀 프로젝트</h2>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="team-project-item" data-bs-toggle="modal" data-bs-target="#zariModal">
+                        <div class="team-project-image">
+                            <img class="img-fluid" src="images/projects/zari/zari-logo.png" alt="zari logo">
+                        </div>
+                        <div class="team-project-content">
+                            <p class="team-project-title text-center">ZARI</p>
+                            <p class="team-project-period text-center">2020.09 ~ 2020.12</p>
+                            <p class="team-project-skill text-center">[React, Firebase]</p>
+                            <p class="team-project-info">
+                                ZARI는 손님에게는 편의성을, 식당 주인에게는 잠재적 손님을 끌어올 수 있게 하여
+                                 손님과 식당 주인 모두에게 시간적, 경제적 이득을 가져다주는 것이 목표입니다.
+                                손님은 식당에 직접 가보지 않더라도 사용자의 위치 정보를 토대로 주변에서도 본인이
+                                 가고자 하는 가게에 있는 손님, 테이블의 현황을 파악할 수 있고,
+                                  식당 주인은 “ZARI”를 이용하여 포스기 기능을 대신 사용할 수도 있습니다.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="zariModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">ZARI</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div id="carouselZariIndicators" class="carousel slide" data-bs-ride="carousel">
+                                        <div class="carousel-indicators">
+                                            <button type="button" data-bs-target="#carouselZariIndicators" data-bs-slide-to="0" class="active"
+                                                aria-current="true" aria-label="Slide 1"></button>
+                                            <button type="button" data-bs-target="#carouselZariIndicators" data-bs-slide-to="1"
+                                                aria-label="Slide 2"></button>
+                                            <button type="button" data-bs-target="#carouselZariIndicators" data-bs-slide-to="2"
+                                                aria-label="Slide 3"></button>
+                                            <button type="button" data-bs-target="#carouselZariIndicators" data-bs-slide-to="3"
+                                                aria-label="Slide 4"></button>
+                                            <button type="button" data-bs-target="#carouselZariIndicators" data-bs-slide-to="4"
+                                                aria-label="Slide 5"></button>
+                                            <button type="button" data-bs-target="#carouselZariIndicators" data-bs-slide-to="5"
+                                                aria-label="Slide 6"></button>
+                                        </div>
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img src="images/projects/zari/landing.PNG" class="d-block w-100" alt="landing">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="images/projects/zari/store.PNG" class="d-block w-100" alt="store">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="images/projects/zari/review.PNG" class="d-block w-100" alt="review">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="images/projects/zari/store-manage.PNG" class="d-block w-100" alt="store manage">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="images/projects/zari/table.PNG" class="d-block w-100" alt="table">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="images/projects/zari/menu.PNG" class="d-block w-100" alt="menu">
+                                            </div>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselZariIndicators"
+                                            data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#carouselZariIndicators"
+                                            data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="https://zari-b4d28.web.app/" class="btn btn-primary">홈페이지로 이동</a>
+                                    <a href="https://github.com/lookskyblue/zari" class="btn btn-primary">깃허브로 이동</a>
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="team-project-item" data-bs-toggle="modal" data-bs-target="#meethubModal">
+                        <div class="team-project-image">
+                            <img class="img-fluid" src="images/projects/meethub/logo.PNG" alt="zari logo">
+                        </div>
+                        <div class="team-project-content">
+                            <p class="team-project-title text-center">MeetHub</p>
+                            <p class="team-project-period text-center">2021.09 ~ 2020.12</p>
+                            <p class="team-project-skill text-center">[React, MongoDB, Express, Node.js]</p>
+                            <p class="team-project-info">
+                                MeetHub는 코로나-19 시대에 맞게 스터디 활동을 비대면으로 진행하는 것에 있어
+                                편리함을 주는 것이 목표입니다.
+                                사용자들은 화상 채팅방에 참여하여 채팅을 칠 수도 있고, 투표, 질문, 화면 공유 등
+                                여러 가지 기능을 사용할 수 있으며, 대표자는 위 기능들에 대한 제어권을 가지고,
+                                또한 출석 기능을 통해 팀원들의 참석 여부를 쉽게 파악할 수 있습니다.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="meethubModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">MeetHub</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div id="carouselMeetHubIndicators" class="carousel slide" data-bs-ride="carousel">
+                                        <div class="carousel-indicators">
+                                            <button type="button" data-bs-target="#carouselMeetHubIndicators" data-bs-slide-to="0" class="active"
+                                                aria-current="true" aria-label="Slide 1"></button>
+                                            <button type="button" data-bs-target="#carouselMeetHubIndicators" data-bs-slide-to="1"
+                                                aria-label="Slide 2"></button>
+                                            <button type="button" data-bs-target="#carouselMeetHubIndicators" data-bs-slide-to="2"
+                                                aria-label="Slide 3"></button>
+                                            <button type="button" data-bs-target="#carouselMeetHubIndicators" data-bs-slide-to="3"
+                                                aria-label="Slide 4"></button>
+                                            <button type="button" data-bs-target="#carouselMeetHubIndicators" data-bs-slide-to="4"
+                                                aria-label="Slide 5"></button>
+                                            <button type="button" data-bs-target="#carouselMeetHubIndicators" data-bs-slide-to="5"
+                                                aria-label="Slide 6"></button>
+                                        </div>
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img src="images/projects/meethub/landing.PNG" class="d-block w-100" alt="landing">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="images/projects/meethub/chatroom.PNG" class="d-block w-100" alt="chatroom">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="images/projects/meethub/vote.PNG" class="d-block w-100" alt="vote">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="images/projects/meethub/attendance.PNG" class="d-block w-100" alt="attendance">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="images/projects/meethub/question.PNG" class="d-block w-100" alt="question">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="images/projects/meethub/sharing.PNG" class="d-block w-100" alt="sharing">
+                                            </div>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselMeetHubIndicators"
+                                            data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#carouselMeetHubIndicators"
+                                            data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="https://github.com/byeongminn/Meethub_React" class="btn btn-primary">깃허브로 이동</a>
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
