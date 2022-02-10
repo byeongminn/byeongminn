@@ -405,6 +405,11 @@ img, svg, i {
 
     /* home */
 
+    .home {
+        padding-top: 7rem;
+        padding-bottom: 8rem;
+    }
+
     .home .Jeon__pic {
         text-align: center;
         margin-bottom: 3rem;
