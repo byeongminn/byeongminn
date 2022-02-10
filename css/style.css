@@ -48,6 +48,11 @@ img, svg, i {
     z-index: 1030;
 }
 
+.top-nav-collapse {
+    transition: all 0.5s;
+    box-shadow: 0 0.3rem 1rem rgb(0 0 0 / 15%);
+}
+
 .navbar .container > a {
     font-size: 1.625rem;
     font-weight: 900;
@@ -283,6 +288,53 @@ img, svg, i {
     overflow: hidden;
 }
 
+/* contact */
+
+.contact {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-color: #E1E2E1;
+}
+
+.contact .contact-mention {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.contact .contact-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.contact .contact-item:nth-child(3n+1),
+.contact .contact-item:nth-child(3n+2) {
+    margin-right: 2rem;
+}
+
+.contact .contact-item .contact-item-icon {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact .contact-item .contact-item-info {
+    font-size: 1.25rem;
+}
+
+/* footer */
+
+.footer {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    font-weight: 600;
+}
+
 @media (max-width: 1399.98px) {
 
     /* home */
@@ -306,7 +358,7 @@ img, svg, i {
     }
 }
 
-@media (max-width: 1299.98px) {
+@media (max-width: 1199.98px) {
 
     /* home */
 
@@ -330,6 +382,22 @@ img, svg, i {
 
     .projects .personal-project-period {
         font-size: 0.95rem;
+    }
+
+    /* contact */
+
+    .contact .contact-item {
+        width: 250px;
+        height: 250px;
+    }
+
+    .contact .contact-item .contact-item-icon {
+        font-size: 3rem;
+        margin-bottom: 1.25rem;
+    }
+    
+    .contact .contact-item .contact-item-info {
+        font-size: 1.125rem;
     }
 }
 
@@ -379,6 +447,22 @@ img, svg, i {
     .projects .team-project-item {
         margin-bottom: 1.5rem;
     }
+
+    /* contact */
+
+    .contact .contact-item {
+        width: 200px;
+        height: 200px;
+    }
+
+    .contact .contact-item .contact-item-icon {
+        font-size: 2.5rem;
+        margin-bottom: 1.25rem;
+    }
+    
+    .contact .contact-item .contact-item-info {
+        font-size: 0.875rem;
+    }
 }
 
 @media (max-width: 767.98px) {
@@ -410,5 +494,46 @@ img, svg, i {
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    /* contact */
+
+    .contact .contact-mention {
+        font-size: 1.2rem;
+    }
+
+    .contact .contact-item {
+        margin: .5rem 0;
+        width: 300px;
+        height: 300px;
+    }
+
+    .contact .contact-item:nth-child(3n+1),
+    .contact .contact-item:nth-child(3n+2) {
+        margin-right: 0;
+    }
+
+    .contact .contact-item .contact-item-icon {
+        font-size: 4rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .contact .contact-item .contact-item-info {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 574.98px) {
+
+    /* skills */
+
+    .skills .skills-icons {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .skills .skills-icons > * {
+        margin-bottom: 1rem;
     }
 }
