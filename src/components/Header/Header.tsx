@@ -1,13 +1,15 @@
 import { Navigation } from 'components';
+import { title } from 'constants/header';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { gray900 } from 'styles/fontStyles';
 
 const Header = () => {
   return (
     <Container>
       <Title>
-        <Link to="/">THE ONE</Link>
+        <Link to="/">{title}</Link>
       </Title>
       <Navigation />
     </Container>
@@ -27,5 +29,13 @@ const Container = styled.div`
 `;
 
 const Title = styled.div`
-  font-size: 32px;
+  a {
+    font-family: 'Pretendard';
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 30px;
+    letter-spacing: 0.5px;
+    color: ${gray900};
+    text-transform: uppercase;
+  }
 `;
