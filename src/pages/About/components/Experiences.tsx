@@ -1,15 +1,10 @@
 import { experiences } from 'constants/about';
+import { GRAY500, GRAY800 } from 'constants/colors';
+import { eng14, eng16, kor16, kor18 } from 'constants/fonts';
+import { CONTENTS, HEADING } from 'constants/styles';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import {
-  Heading,
-  gray500,
-  gray800,
-  pretendard14Reg,
-  pretendard16Reg,
-  spoqa16Reg,
-} from 'styles/fontStyles';
 
 const Experiences = () => {
   return (
@@ -51,9 +46,12 @@ const Container = styled.div`
   margin-top: 3rem;
 `;
 
+const Heading = styled.h2`
+  ${HEADING};
+`;
+
 const Contents = styled.div`
-  display: flex;
-  flex-direction: column;
+  ${CONTENTS};
   row-gap: 1.5rem;
 `;
 
@@ -63,41 +61,38 @@ const AboutCompany = styled.div`
   display: flex;
   align-items: center;
   column-gap: 1.5rem;
-  color: ${gray800};
+  color: ${GRAY800};
 `;
 
-const Company = styled.div`
-  font-family: 'Spoqa';
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 26px;
-  letter-spacing: -0.5px;
+const Company = styled.h3`
+  ${kor18};
 `;
 
-const Position = styled.div`
-  ${spoqa16Reg};
+const Position = styled.h4`
+  ${kor16};
 `;
 
-const Job = styled.div`
-  ${spoqa16Reg};
+const Job = styled.h4`
+  ${kor16};
 `;
 
-const Period = styled.div`
+const Period = styled.h4`
   flex: 1;
   text-align: right;
-  ${pretendard16Reg}
+  ${eng16}
 `;
 
 const AboutProjects = styled.div`
   margin-top: 1rem;
-  border-block: 1px solid ${gray500};
+  border-block: 1px solid ${GRAY500};
 `;
 
 const AboutProject = styled.div`
   padding: 1rem 1.5rem;
   display: flex;
   align-items: center;
-  border-block: 1px solid ${gray500};
+  border-block: 1px solid ${GRAY500};
+  color: ${GRAY800};
 
   &:first-child,
   &:last-child {
@@ -105,25 +100,23 @@ const AboutProject = styled.div`
   }
 `;
 
-const ProjectTitle = styled.div`
+const ProjectTitle = styled.h4`
   margin-right: 1.5rem;
   flex: 0 0 200px;
-  font-family: 'Spoqa';
+  ${kor16};
   font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
 `;
 
-const ProjectPeriod = styled.div`
+const ProjectPeriod = styled.h5`
   margin-right: 4rem;
   flex: 0 0 113px;
-  ${pretendard14Reg};
+  ${eng14};
 `;
 
-const ProjectRole = styled.div`
+const ProjectRole = styled.h4`
   margin-right: 1.5rem;
   flex: 1 0 600px;
-  ${spoqa16Reg};
+  ${kor16};
 `;
 
 const ProjectLink = styled(Link)`

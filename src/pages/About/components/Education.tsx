@@ -1,7 +1,9 @@
 import { education } from 'constants/about';
+import { GRAY700, GRAY800 } from 'constants/colors';
+import { eng16, kor16, kor18 } from 'constants/fonts';
+import { CONTENT, CONTENTS, HEADING } from 'constants/styles';
 import React from 'react';
 import styled from 'styled-components';
-import { Heading, gray700, gray800, spoqa16Reg } from 'styles/fontStyles';
 
 const Education = () => {
   return (
@@ -26,33 +28,31 @@ const Container = styled.div`
   margin-top: 3rem;
 `;
 
+const Heading = styled.h2`
+  ${HEADING};
+`;
+
 const Contents = styled.div`
-  display: flex;
-  flex-direction: column;
+  ${CONTENTS};
   row-gap: 0.75rem;
 `;
 
 const Content = styled.div`
-  display: flex;
-  align-items: center;
+  ${CONTENT};
   column-gap: 2.5rem;
 `;
 
-const School = styled.h5`
-  font-family: 'Spoqa';
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 26px;
-  letter-spacing: 0.5px;
-  color: ${gray800};
+const School = styled.h3`
+  ${kor18};
+  color: ${GRAY800};
 `;
 
-const Major = styled.h6`
-  ${spoqa16Reg};
-  color: ${gray700};
+const Major = styled.h4`
+  ${kor16};
+  color: ${GRAY700};
 `;
 
-const Period = styled.h6`
-  ${spoqa16Reg};
-  color: ${gray700};
+const Period = styled.h4`
+  ${eng16};
+  color: ${GRAY700};
 `;

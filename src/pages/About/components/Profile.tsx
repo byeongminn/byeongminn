@@ -1,7 +1,9 @@
 import { profile } from 'constants/about';
+import { GRAY900 } from 'constants/colors';
+import { kor18 } from 'constants/fonts';
+import { CONTENT, CONTENTS, HEADING } from 'constants/styles';
 import React from 'react';
 import styled from 'styled-components';
-import { Contents, Heading, gray900, pretendard16Reg } from 'styles/fontStyles';
 
 const Profile = () => {
   const { name, englishName, birth, address, number, email } = profile;
@@ -27,21 +29,23 @@ export default Profile;
 
 const Container = styled.div``;
 
-const Content = styled.div`
-  display: flex;
-  align-items: center;
-  column-gap: 0.75rem;
-  ${pretendard16Reg};
-  color: ${gray900};
+const Heading = styled.h2`
+  ${HEADING};
 `;
 
-const Name = styled.h4`
-  font-family: 'Spoqa';
-  font-weight: 500;
-  font-size: 18px;
+const Contents = styled.div`
+  ${CONTENTS};
+`;
+
+const Content = styled.div`
+  ${CONTENT}
+  color: ${GRAY900};
+`;
+
+const Name = styled.h3`
+  ${kor18};
   line-height: 24px;
-  letter-spacing: -0.5px;
-  color: ${gray900};
+  color: ${GRAY900};
 `;
 
 const EnglishName = styled.h4`
@@ -49,5 +53,5 @@ const EnglishName = styled.h4`
   font-weight: 500;
   font-size: 18px;
   line-height: 24px;
-  color: ${gray900};
+  color: ${GRAY900};
 `;

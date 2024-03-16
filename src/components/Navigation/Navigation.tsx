@@ -1,8 +1,9 @@
-import { navigation } from 'constants/navigation';
+import { GRAY600, GRAY900 } from 'constants/colors';
+import { eng16 } from 'constants/fonts';
+import { NAVIGATION } from 'constants/navigation';
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
-import { gray600, gray900, pretendard16Reg } from 'styles/fontStyles';
 
 const Navigation = () => {
   const { pathname } = useLocation();
@@ -10,7 +11,7 @@ const Navigation = () => {
   return (
     <Container>
       <NavList>
-        {navigation.map(({ id, name, url }) => (
+        {NAVIGATION.map(({ id, name, url }) => (
           <NavItem key={id} $isActive={pathname === url}>
             <Link to={url}>{name}</Link>
           </NavItem>
@@ -33,8 +34,8 @@ const NavList = styled.ul`
 
 const NavItem = styled.li<{ $isActive: boolean }>`
   a {
-    ${pretendard16Reg};
-    color: ${({ $isActive }) => ($isActive ? `${gray900}` : `${gray600}`)};
+    ${eng16};
+    color: ${({ $isActive }) => ($isActive ? `${GRAY900}` : `${GRAY600}`)};
     text-transform: uppercase;
   }
 `;

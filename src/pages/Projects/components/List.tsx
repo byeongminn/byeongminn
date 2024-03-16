@@ -1,13 +1,8 @@
+import { GRAY300, GRAY400, GRAY700, GRAY800 } from 'constants/colors';
+import { eng14, kor18 } from 'constants/fonts';
 import { projects } from 'constants/projects';
 import React from 'react';
 import styled from 'styled-components';
-import {
-  gray300,
-  gray400,
-  gray700,
-  gray800,
-  pretendard14Reg,
-} from 'styles/fontStyles';
 
 type Props = {
   activeId: number;
@@ -55,16 +50,12 @@ const Project = styled.div<{ $isActive: boolean }>`
 
 const Logo = styled.div`
   height: 8.375rem;
-  background-color: ${gray400};
+  background-color: ${GRAY400};
 `;
 
-const Title = styled.h4`
-  font-family: 'Spoqa';
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 26px;
-  letter-spacing: -0.5px;
-  color: ${gray800};
+const Title = styled.h2`
+  ${kor18};
+  color: ${GRAY800};
 `;
 
 const Chips = styled.div`
@@ -76,8 +67,8 @@ const Chips = styled.div`
 
 const Chip = styled.div`
   padding-inline: 0.5rem;
-  background-color: ${gray300};
+  background-color: ${GRAY300};
   border-radius: 999px;
-  ${pretendard14Reg};
-  color: ${gray700};
+  ${eng14};
+  color: ${GRAY700};
 `;

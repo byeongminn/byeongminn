@@ -8,7 +8,7 @@ import {
   MoreInfomation,
   Profile,
   Skills,
-} from '.';
+} from './components';
 
 const About = () => {
   return (

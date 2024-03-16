@@ -1,15 +1,15 @@
 import { Navigation } from 'components';
-import { title } from 'constants/header';
+import { GRAY900 } from 'constants/colors';
+import { TITLE } from 'constants/header';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { gray900 } from 'styles/fontStyles';
 
 const Header = () => {
   return (
     <Container>
       <Title>
-        <Link to="/">{title}</Link>
+        <Link to="/">{TITLE}</Link>
       </Title>
       <Navigation />
     </Container>
@@ -35,7 +35,7 @@ const Title = styled.div`
     font-size: 32px;
     line-height: 30px;
     letter-spacing: 0.5px;
-    color: ${gray900};
+    color: ${GRAY900};
     text-transform: uppercase;
   }
 `;

@@ -1,12 +1,9 @@
 import { awardsAndActivities } from 'constants/about';
+import { GRAY800 } from 'constants/colors';
+import { eng16, kor16, kor18 } from 'constants/fonts';
+import { CONTENT, CONTENTS, HEADING } from 'constants/styles';
 import React from 'react';
 import styled from 'styled-components';
-import {
-  Heading,
-  gray800,
-  pretendard16Reg,
-  spoqa16Reg,
-} from 'styles/fontStyles';
 
 const Awards = () => {
   return (
@@ -31,31 +28,29 @@ const Container = styled.div`
   margin-top: 3rem;
 `;
 
+const Heading = styled.h2`
+  ${HEADING};
+`;
+
 const Contents = styled.div`
-  display: flex;
-  flex-direction: column;
+  ${CONTENTS};
   row-gap: 1.5rem;
 `;
 
 const Content = styled.div`
-  display: flex;
-  align-items: center;
+  ${CONTENT};
   column-gap: 1.5rem;
-  color: ${gray800};
+  color: ${GRAY800};
 `;
 
 const Year = styled.h5`
-  ${pretendard16Reg};
+  ${eng16};
 `;
 
-const Name = styled.h4`
-  font-family: 'Spoqa';
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 26px;
-  letter-spacing: -0.5px;
+const Name = styled.h3`
+  ${kor18};
 `;
 
-const Outcome = styled.h5`
-  ${spoqa16Reg};
+const Outcome = styled.h4`
+  ${kor16};
 `;
