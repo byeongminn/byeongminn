@@ -7,6 +7,8 @@ import {
   ProjectThreeDetails,
   ProjectTwoDetails,
 } from './components';
+import { eng16 } from 'constants/fonts';
+import { GRAY600 } from 'constants/colors';
 
 const Projects = () => {
   const [activeId, setActiveId] = useState(0);
@@ -34,8 +36,8 @@ const Projects = () => {
         ) : activeId + 1 === 4 ? (
           <ProjectFourDetails />
         ) : null}
+        <Button onClick={handleTopClick}>TOP</Button>
       </DetailsSection>
-      <Button onClick={handleTopClick}>TOP</Button>
     </Container>
   );
 };
@@ -45,7 +47,6 @@ export default Projects;
 const Container = styled.div`
   display: flex;
   column-gap: 1rem;
-  position: relative;
 `;
 
 const ListSection = styled.section`
@@ -57,9 +58,12 @@ const DetailsSection = styled.section`
 `;
 
 const Button = styled.button`
-  position: absolute;
-  left: 0;
-  bottom: 0;
+  padding-block: 1.5rem;
   width: 100%;
   cursor: pointer;
+  background-color: #ffffff;
+  border-block: 0.5px solid ${GRAY600};
+  border-inline: none;
+  ${eng16};
+  color: ${GRAY600};
 `;
