@@ -26,11 +26,18 @@ export type Education = {
   period: string;
 };
 
+export type Chip = {
+  id: number;
+  name: string;
+};
+
 export type Project = {
   id: number;
+  logo: string;
   title: string;
   period: string;
   role: string;
+  chips: Array<Chip>;
   link: string;
 };
 
