@@ -25,3 +25,6 @@ yarn-error.log*
 #constants
 /src/constants/about.ts
 /src/constants/projects.ts
+
+# data
+/public/assets

@@ -1,16 +1,27 @@
-import { introduction } from 'constants/about';
 import { GRAY800 } from 'constants/colors';
 import { kor18, kor20 } from 'constants/fonts';
 import { CONTENT, CONTENTS, HEADING } from 'constants/styles';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import getIntroduction from 'services/about/get-introduction';
 import styled from 'styled-components';
+import { Introduction } from 'types';
 
-const Introduction = () => {
-  return (
+const IntroductionComponent = () => {
+  const [introduction, setIntroduction] = useState<Array<Introduction>>([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await getIntroduction();
+      setIntroduction(data);
+    };
+    fetchData();
+  }, []);
+
+  return introduction.length > 0 ? (
     <Container>
       <Heading>Introduction</Heading>
       <Contents>
-        {introduction.map(({ id, title, content }) => (
+        {introduction.map(({ id, title, content }: Introduction) => (
           <Content key={id}>
             <Title>{title}</Title>
             <IntroductionContent>{content}</IntroductionContent>
@@ -18,12 +29,14 @@ const Introduction = () => {
         ))}
       </Contents>
     </Container>
-  );
+  ) : null;
 };
 
-export default Introduction;
+export default IntroductionComponent;
 
-const Container = styled.div``;
+const Container = styled.div`
+  margin-bottom: 3rem;
+`;
 
 const Heading = styled.h2`
   ${HEADING};

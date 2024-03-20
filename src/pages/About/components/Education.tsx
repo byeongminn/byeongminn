@@ -1,16 +1,27 @@
-import { education } from 'constants/about';
 import { GRAY700, GRAY800 } from 'constants/colors';
 import { eng16, kor16, kor18 } from 'constants/fonts';
 import { CONTENT, CONTENTS, HEADING } from 'constants/styles';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import getEducation from 'services/about/get-education';
 import styled from 'styled-components';
+import { Education } from 'types';
 
-const Education = () => {
-  return (
+const EducationComponent = () => {
+  const [education, setEducation] = useState<Array<Education>>([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await getEducation();
+      setEducation(data);
+    };
+    fetchData();
+  }, []);
+
+  return education.length > 0 ? (
     <Container>
       <Heading>Education</Heading>
       <Contents>
-        {education.map(({ id, school, major, period }) => (
+        {education.map(({ id, school, major, period }: Education) => (
           <Content key={id}>
             <School>{school}</School>
             <Major>{major}</Major>
@@ -19,13 +30,13 @@ const Education = () => {
         ))}
       </Contents>
     </Container>
-  );
+  ) : null;
 };
 
-export default Education;
+export default EducationComponent;
 
 const Container = styled.div`
-  margin-top: 3rem;
+  margin-bottom: 3rem;
 `;
 
 const Heading = styled.h2`

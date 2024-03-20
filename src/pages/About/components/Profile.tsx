@@ -1,33 +1,46 @@
-import { profile } from 'constants/about';
 import { GRAY900 } from 'constants/colors';
 import { kor18 } from 'constants/fonts';
 import { CONTENT, CONTENTS, HEADING } from 'constants/styles';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import getProfile from 'services/about/get-profile';
 import styled from 'styled-components';
+import { Profile } from 'types';
 
-const Profile = () => {
-  const { name, englishName, birth, address, number, email } = profile;
+const ProfileComponent = () => {
+  const [profile, setProfile] = useState<Profile>({});
 
-  return (
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await getProfile();
+      setProfile(data);
+    };
+    fetchData();
+  }, []);
+
+  return Object.keys(profile).length !== 0 ? (
     <Container>
       <Heading>Profile</Heading>
       <Contents>
-        <Content>
-          <Name>{name}</Name>
-          <EnglishName>{englishName}</EnglishName>
-        </Content>
-        <Content>{birth}</Content>
-        <Content>{address}</Content>
-        <Content>{number}</Content>
-        <Content>{email}</Content>
+        {profile.name && profile.englishName ? (
+          <Content>
+            <Name>{profile.name}</Name>
+            <EnglishName>{profile.englishName}</EnglishName>
+          </Content>
+        ) : null}
+        {profile.birth ? <Content>{profile.birth}</Content> : null}
+        {profile.address ? <Content>{profile.address}</Content> : null}
+        {profile.number ? <Content>{profile.number}</Content> : null}
+        {profile.email ? <Content>{profile.email}</Content> : null}
       </Contents>
     </Container>
-  );
+  ) : null;
 };
 
-export default Profile;
+export default ProfileComponent;
 
-const Container = styled.div``;
+const Container = styled.div`
+  margin-bottom: 3rem;
+`;
 
 const Heading = styled.h2`
   ${HEADING};

@@ -5,7 +5,6 @@ import {
   Education,
   Experiences,
   Introduction,
-  MoreInfomation,
   Profile,
   Skills,
 } from './components';
@@ -16,7 +15,6 @@ const About = () => {
       <Cue>
         <Profile />
         <Skills />
-        <MoreInfomation />
       </Cue>
       <Notes>
         <Introduction />

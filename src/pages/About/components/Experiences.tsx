@@ -1,49 +1,64 @@
-import { experiences } from 'constants/about';
 import { GRAY500, GRAY800 } from 'constants/colors';
 import { eng14, eng16, kor16, kor18 } from 'constants/fonts';
 import { CONTENTS, HEADING } from 'constants/styles';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import getExperiences from 'services/about/get-experiences';
 import styled from 'styled-components';
+import { Experience, Project } from 'types';
 
-const Experiences = () => {
-  return (
+const ExperiencesComponent = () => {
+  const [experiences, setExperiences] = useState<Array<Experience>>([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await getExperiences();
+      setExperiences(data);
+    };
+    fetchData();
+  }, []);
+
+  return experiences.length > 0 ? (
     <Container>
       <Heading>Experiences</Heading>
       <Contents>
-        {experiences.map(({ id, company, position, job, period, projects }) => (
-          <Content key={id}>
-            <AboutCompany>
-              <Company>{company}</Company>
-              <Position>{position}</Position>
-              <Job>{job}</Job>
-              <Period>{period}</Period>
-            </AboutCompany>
-            {projects.length > 0 ? (
-              <AboutProjects>
-                {projects.map(({ id, title, period, role, link }) => (
-                  <AboutProject key={id}>
-                    <ProjectTitle>{title}</ProjectTitle>
-                    <ProjectPeriod>{period}</ProjectPeriod>
-                    <ProjectRole>{role}</ProjectRole>
-                    <ProjectLink to={link}>
-                      <img src="/assets/icons/link.svg" alt="link" />
-                    </ProjectLink>
-                  </AboutProject>
-                ))}
-              </AboutProjects>
-            ) : null}
-          </Content>
-        ))}
+        {experiences.map(
+          ({ id, company, position, job, period, projects }: Experience) => (
+            <Content key={id}>
+              <AboutCompany>
+                <Company>{company}</Company>
+                <Position>{position}</Position>
+                <Job>{job}</Job>
+                <Period>{period}</Period>
+              </AboutCompany>
+              {projects.length > 0 ? (
+                <AboutProjects>
+                  {projects.map(
+                    ({ id, title, period, role, link }: Project) => (
+                      <AboutProject key={id}>
+                        <ProjectTitle>{title}</ProjectTitle>
+                        <ProjectPeriod>{period}</ProjectPeriod>
+                        <ProjectRole>{role}</ProjectRole>
+                        <ProjectLink to={link}>
+                          <img src="/assets/icons/link.svg" alt="link" />
+                        </ProjectLink>
+                      </AboutProject>
+                    ),
+                  )}
+                </AboutProjects>
+              ) : null}
+            </Content>
+          ),
+        )}
       </Contents>
     </Container>
-  );
+  ) : null;
 };
 
-export default Experiences;
+export default ExperiencesComponent;
 
 const Container = styled.div`
-  margin-top: 3rem;
+  margin-bottom: 3rem;
 `;
 
 const Heading = styled.h2`

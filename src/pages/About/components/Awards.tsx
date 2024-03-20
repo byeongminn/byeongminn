@@ -1,16 +1,27 @@
-import { awardsAndActivities } from 'constants/about';
 import { GRAY800 } from 'constants/colors';
 import { eng16, kor16, kor18 } from 'constants/fonts';
 import { CONTENT, CONTENTS, HEADING } from 'constants/styles';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import getAwards from 'services/about/get-awards';
 import styled from 'styled-components';
+import { Award } from 'types';
 
-const Awards = () => {
-  return (
+const AwardsComponent = () => {
+  const [awards, setAwards] = useState<Array<Award>>([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await getAwards();
+      setAwards(data);
+    };
+    fetchData();
+  }, []);
+
+  return awards.length > 0 ? (
     <Container>
       <Heading>Awards & activities</Heading>
       <Contents>
-        {awardsAndActivities.map(({ id, year, name, outcome }) => (
+        {awards.map(({ id, year, name, outcome }: Award) => (
           <Content key={id}>
             <Year>{year}</Year>
             <Name>{name}</Name>
@@ -19,14 +30,12 @@ const Awards = () => {
         ))}
       </Contents>
     </Container>
-  );
+  ) : null;
 };
 
-export default Awards;
+export default AwardsComponent;
 
-const Container = styled.div`
-  margin-top: 3rem;
-`;
+const Container = styled.div``;
 
 const Heading = styled.h2`
   ${HEADING};
