@@ -36,3 +36,13 @@
     url('./SpoqaHanSansNeo-Medium.woff2') format('woff2'),
     url('./SpoqaHanSansNeo-Medium.woff') format('woff');
 }
+/** ChampagneLimousines **/
+/* Regular */
+@font-face {
+  font-family: 'Champagne';
+  font-style: normal;
+  font-weight: 400;
+  src:
+    url('./ChampagneLimousines-Regular.woff2') format('woff2'),
+    url('./ChampagneLimousines-Regular.woff') format('woff');
+}

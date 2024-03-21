@@ -1,5 +1,5 @@
 import { Navigation } from 'components';
-import { GRAY900 } from 'constants/colors';
+import { GRAY800 } from 'constants/colors';
 import { TITLE } from 'constants/header';
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -30,12 +30,12 @@ const Container = styled.div`
 
 const Title = styled.div`
   a {
-    font-family: 'Pretendard';
-    font-weight: 500;
+    font-family: 'Champagne';
+    font-weight: 400;
     font-size: 32px;
     line-height: 30px;
-    letter-spacing: 0.5px;
-    color: ${GRAY900};
+    letter-spacing: 3px;
+    color: ${GRAY800};
     text-transform: uppercase;
   }
 `;

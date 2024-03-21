@@ -1,5 +1,5 @@
 import { GRAY700, GRAY800 } from 'constants/colors';
-import { eng16, kor16, kor18 } from 'constants/fonts';
+import { eng14, kor16, kor18 } from 'constants/fonts';
 import { CONTENT, CONTENTS, HEADING } from 'constants/styles';
 import React, { useEffect, useState } from 'react';
 import getEducation from 'services/about/get-education';
@@ -64,6 +64,6 @@ const Major = styled.h4`
 `;
 
 const Period = styled.h4`
-  ${eng16};
+  ${eng14};
   color: ${GRAY700};
 `;
