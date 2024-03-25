@@ -56,3 +56,18 @@ export type Award = {
   name: string;
   outcome: string;
 };
+
+export type More = {
+  id: number;
+  name: string;
+  url: string;
+};
+
+export type Beyond = {
+  id: number;
+  information: string;
+};
+
+export type Image = {
+  url: string;
+};
