@@ -48,7 +48,7 @@ const ContentItem = styled.div`
   column-gap: 2.5rem;
   color: ${({ theme }) => theme.detailsColor};
 
-  @media ${({ theme }) => theme.device.mobile} {
+  @media ${({ theme }) => theme.device.tablet} {
     flex-direction: column;
     align-items: flex-start;
     column-gap: 0;
@@ -59,7 +59,7 @@ const ContentItem = styled.div`
 const School = styled.h3`
   ${kor18};
 
-  @media ${({ theme }) => theme.device.mobile} {
+  @media ${({ theme }) => theme.device.tablet} {
     ${kor14M};
   }
 `;
@@ -67,7 +67,7 @@ const School = styled.h3`
 const Major = styled.h4`
   ${kor16};
 
-  @media ${({ theme }) => theme.device.mobile} {
+  @media ${({ theme }) => theme.device.tablet} {
     ${kor14};
   }
 `;
@@ -75,7 +75,7 @@ const Major = styled.h4`
 const Period = styled.h4`
   ${eng14};
 
-  @media ${({ theme }) => theme.device.mobile} {
+  @media ${({ theme }) => theme.device.tablet} {
     ${eng12};
   }
 `;

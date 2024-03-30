@@ -19,8 +19,6 @@ declare module 'styled-components' {
     device: {
       mobile: string;
       tablet: string;
-      labtop: string;
-      desktop: string;
     };
   }
 }

@@ -69,5 +69,5 @@ export type Beyond = {
 };
 
 export type Image = {
-  url: string;
+  url?: string;
 };

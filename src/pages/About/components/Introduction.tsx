@@ -46,7 +46,7 @@ const ContentItem = styled.div`
   column-gap: 0.75rem;
   color: ${({ theme }) => theme.detailsColor};
 
-  @media ${({ theme }) => theme.device.mobile} {
+  @media ${({ theme }) => theme.device.tablet} {
     flex-direction: column;
     column-gap: 0;
     row-gap: 0.25rem;
@@ -57,7 +57,7 @@ const Title = styled.h4`
   flex: 1;
   ${kor20};
 
-  @media ${({ theme }) => theme.device.mobile} {
+  @media ${({ theme }) => theme.device.tablet} {
     ${kor14M};
   }
 `;
@@ -67,7 +67,7 @@ const IntroductionContent = styled.p`
   ${kor18};
   font-weight: 400;
 
-  @media ${({ theme }) => theme.device.mobile} {
+  @media ${({ theme }) => theme.device.tablet} {
     ${kor14};
   }
 `;

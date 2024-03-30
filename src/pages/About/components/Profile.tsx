@@ -44,7 +44,7 @@ const SectionContent = styled.div`
   flex-direction: column;
   row-gap: 0.5rem;
 
-  @media ${({ theme }) => theme.device.mobile} {
+  @media ${({ theme }) => theme.device.tablet} {
     row-gap: 0.25rem;
   }
 `;
@@ -55,7 +55,7 @@ const ContentItem = styled.div`
   ${eng16};
   color: ${({ theme }) => theme.detailsColor};
 
-  @media ${({ theme }) => theme.device.mobile} {
+  @media ${({ theme }) => theme.device.tablet} {
     ${eng14};
   }
 `;
@@ -64,7 +64,7 @@ const Name = styled.h3`
   ${kor18};
   line-height: 24px;
 
-  @media ${({ theme }) => theme.device.mobile} {
+  @media ${({ theme }) => theme.device.tablet} {
     ${kor14M};
   }
 `;
@@ -75,7 +75,7 @@ const EnglishName = styled.h4`
   font-size: 18px;
   line-height: 24px;
 
-  @media ${({ theme }) => theme.device.mobile} {
+  @media ${({ theme }) => theme.device.tablet} {
     ${eng14M};
   }
 `;

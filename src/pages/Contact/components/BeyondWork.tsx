@@ -1,6 +1,5 @@
-import { GRAY800 } from 'constants/colors';
-import { eng16 } from 'constants/fonts';
-import { CONTENT, CONTENTS, HEADING } from 'constants/styles';
+import SectionTitle from 'components/Common/SectionTitle';
+import { eng14, eng16 } from 'constants/fonts';
 import React, { useEffect, useState } from 'react';
 import getBeyond from 'services/contact/get-beyond';
 import styled from 'styled-components';
@@ -19,36 +18,44 @@ const BeyondWorkComponent = () => {
 
   return beyondWork.length > 0 ? (
     <Container>
-      <Heading>Beyond Work</Heading>
-      <Contents>
+      <SectionTitle>Beyond Work</SectionTitle>
+      <SectionContent>
         {beyondWork.map(({ id, information }) => (
-          <Content key={id}>
+          <ContentItem key={id}>
             <Information>{information}</Information>
-          </Content>
+          </ContentItem>
         ))}
-      </Contents>
+      </SectionContent>
     </Container>
   ) : null;
 };
 
 export default BeyondWorkComponent;
 
-const Container = styled.div``;
+const Container = styled.div`
+  flex: 1 1 17.375rem;
 
-const Heading = styled.h2`
-  ${HEADING};
+  @media ${({ theme }) => theme.device.mobile} {
+    flex: initial;
+  }
 `;
 
-const Contents = styled.div`
-  ${CONTENTS};
+const SectionContent = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 1rem;
+  row-gap: 0.5rem;
 `;
 
-const Content = styled.div`
-  ${CONTENT};
+const ContentItem = styled.div`
+  ${eng16};
+  color: ${({ theme }) => theme.detailsColor};
+
+  @media ${({ theme }) => theme.device.mobile} {
+    ${eng14};
+  }
 `;
 
 const Information = styled.h4`
-  ${eng16};
-  ${GRAY800};
   text-transform: capitalize;
 `;

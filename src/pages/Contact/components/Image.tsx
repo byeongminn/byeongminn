@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { Image } from 'types';
 
 const ImageComponent = () => {
-  const [image, setImage] = useState<Image>({ url: '' });
+  const [image, setImage] = useState<Image>({});
 
   useEffect(() => {
     const fetchData = async () => {
@@ -21,6 +21,6 @@ export default ImageComponent;
 
 const Img = styled.div<{ src: string }>`
   width: 100%;
-  height: 100%;
-  background: url(${({ src }) => src}) no-repeat center / contain;
+  aspect-ratio: 16 / 9;
+  background: url(${({ src }) => src}) no-repeat center / cover;
 `;

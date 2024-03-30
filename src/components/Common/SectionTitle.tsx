@@ -19,7 +19,7 @@ const Container = styled.h2`
   ${eng20};
   color: ${({ theme }) => theme.sectionColor};
 
-  @media ${({ theme }) => theme.device.mobile} {
+  @media ${({ theme }) => theme.device.tablet} {
     margin-bottom: 1rem;
     ${eng16M};
   }

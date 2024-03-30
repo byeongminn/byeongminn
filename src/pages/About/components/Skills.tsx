@@ -40,7 +40,7 @@ const SectionContent = styled.div`
   flex-direction: column;
   row-gap: 0.5rem;
 
-  @media ${({ theme }) => theme.device.mobile} {
+  @media ${({ theme }) => theme.device.tablet} {
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
@@ -57,7 +57,7 @@ const ContentItem = styled.div`
   color: ${({ theme }) => theme.detailsColor};
   text-transform: capitalize;
 
-  @media ${({ theme }) => theme.device.mobile} {
+  @media ${({ theme }) => theme.device.tablet} {
     column-gap: 0.5rem;
     ${eng14};
   }
@@ -67,7 +67,7 @@ const Image = styled.img`
   width: 1.5rem;
   height: 1.5rem;
 
-  @media ${({ theme }) => theme.device.mobile} {
+  @media ${({ theme }) => theme.device.tablet} {
     width: 1.125rem;
     height: 1.125rem;
   }

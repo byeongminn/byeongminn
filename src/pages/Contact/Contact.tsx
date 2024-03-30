@@ -21,16 +21,19 @@ export default Contact;
 
 const Container = styled.div`
   display: flex;
-  column-gap: 0.75rem;
-`;
-
-const Cue = styled.section`
-  flex: 1;
-  display: flex;
   flex-direction: column;
   row-gap: 3rem;
 `;
 
-const Notes = styled.section`
-  flex: 4;
+const Cue = styled.section`
+  display: flex;
+  column-gap: 1.5rem;
+
+  @media ${({ theme }) => theme.device.mobile} {
+    flex-direction: column;
+    column-gap: 0;
+    row-gap: 3rem;
+  }
 `;
+
+const Notes = styled.section``;

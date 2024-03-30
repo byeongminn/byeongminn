@@ -101,7 +101,7 @@ const Company = styled.div`
   align-items: center;
   column-gap: 1.5rem;
 
-  @media ${({ theme }) => theme.device.mobile} {
+  @media ${({ theme }) => theme.device.tablet} {
     flex-direction: column;
     align-items: normal;
     column-gap: 0;
@@ -114,7 +114,7 @@ const Group = styled.section`
   align-items: center;
   column-gap: 1.5rem;
 
-  @media ${({ theme }) => theme.device.mobile} {
+  @media ${({ theme }) => theme.device.tablet} {
     justify-content: space-between;
   }
 `;
@@ -122,7 +122,7 @@ const Group = styled.section`
 const CompanyName = styled.h3`
   ${kor18};
 
-  @media ${({ theme }) => theme.device.mobile} {
+  @media ${({ theme }) => theme.device.tablet} {
     ${kor14M};
   }
 `;
@@ -130,7 +130,7 @@ const CompanyName = styled.h3`
 const PositionAndJob = styled.div`
   ${kor16};
 
-  @media ${({ theme }) => theme.device.mobile} {
+  @media ${({ theme }) => theme.device.tablet} {
     ${kor14};
   }
 `;
@@ -138,7 +138,7 @@ const PositionAndJob = styled.div`
 const Period = styled.h4`
   ${eng16}
 
-  @media ${({ theme }) => theme.device.mobile} {
+  @media ${({ theme }) => theme.device.tablet} {
     ${eng12};
     text-align: right;
   }
@@ -148,7 +148,7 @@ const Projects = styled.div`
   background-color: ${({ theme }) => theme.tableBgColor};
   border-top: 1px solid ${({ theme }) => theme.tableBorderColor};
 
-  @media ${({ theme }) => theme.device.mobile} {
+  @media ${({ theme }) => theme.device.tablet} {
     display: none;
   }
 `;
@@ -156,17 +156,9 @@ const Projects = styled.div`
 const ProjectsMobile = styled.div`
   background-color: ${({ theme }) => theme.tableBgColor};
   border-top: 1px solid ${({ theme }) => theme.tableBorderColor};
+  display: none;
 
-  @media ${({ theme }) => theme.device.desktop} {
-    display: none;
-  }
-  @media ${({ theme }) => theme.device.labtop} {
-    display: none;
-  }
   @media ${({ theme }) => theme.device.tablet} {
-    display: none;
-  }
-  @media ${({ theme }) => theme.device.mobile} {
     display: block;
   }
 `;
@@ -179,7 +171,7 @@ const Project = styled.div`
   column-gap: 1.5rem;
   border-bottom: 1px solid ${({ theme }) => theme.tableBorderColor};
 
-  @media ${({ theme }) => theme.device.mobile} {
+  @media ${({ theme }) => theme.device.tablet} {
     padding: 0.5rem;
     flex-direction: column;
     align-items: normal;
@@ -197,7 +189,7 @@ const ProjectTitle = styled.h4`
   font-weight: 500;
   color: ${({ theme }) => theme.tableNameColor};
 
-  @media ${({ theme }) => theme.device.mobile} {
+  @media ${({ theme }) => theme.device.tablet} {
     ${eng14};
   }
 `;
@@ -207,7 +199,7 @@ const ProjectRole = styled.h4`
   ${kor16};
   color: ${({ theme }) => theme.tableDescriptionColor};
 
-  @media ${({ theme }) => theme.device.mobile} {
+  @media ${({ theme }) => theme.device.tablet} {
     ${kor12};
   }
 `;
@@ -215,7 +207,7 @@ const ProjectRole = styled.h4`
 const ProjectLink = styled(Link)`
   height: 1.5rem;
 
-  @media ${({ theme }) => theme.device.mobile} {
+  @media ${({ theme }) => theme.device.tablet} {
     height: 1.125rem;
 
     > img {

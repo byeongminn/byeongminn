@@ -41,7 +41,7 @@ const SectionContent = styled.div`
   flex-direction: column;
   row-gap: 1.5rem;
 
-  @media ${({ theme }) => theme.device.mobile} {
+  @media ${({ theme }) => theme.device.tablet} {
     row-gap: 1rem;
   }
 `;
@@ -52,7 +52,7 @@ const ContentItem = styled.div`
   column-gap: 1.5rem;
   color: ${({ theme }) => theme.detailsColor};
 
-  @media ${({ theme }) => theme.device.mobile} {
+  @media ${({ theme }) => theme.device.tablet} {
     flex-direction: column;
     align-items: normal;
     column-gap: 0;
@@ -63,7 +63,7 @@ const ContentItem = styled.div`
 const Year = styled.h5`
   ${eng16};
 
-  @media ${({ theme }) => theme.device.mobile} {
+  @media ${({ theme }) => theme.device.tablet} {
     ${eng14};
   }
 `;
@@ -71,7 +71,7 @@ const Year = styled.h5`
 const Name = styled.h3`
   ${kor18};
 
-  @media ${({ theme }) => theme.device.mobile} {
+  @media ${({ theme }) => theme.device.tablet} {
     margin-top: 0.5rem;
     ${kor14M};
   }
@@ -80,7 +80,7 @@ const Name = styled.h3`
 const Outcome = styled.h4`
   ${kor16};
 
-  @media ${({ theme }) => theme.device.mobile} {
+  @media ${({ theme }) => theme.device.tablet} {
     ${kor12};
   }
 `;

@@ -23,7 +23,7 @@ const Copyright = styled.h5`
   color: ${({ theme }) => theme.footerColor};
   text-align: right;
 
-  @media ${({ theme }) => theme.device.mobile} {
+  @media ${({ theme }) => theme.device.tablet} {
     ${eng12};
     text-align: center;
   }

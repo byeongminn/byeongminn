@@ -1,7 +1,6 @@
 // import { moreInfomation } from 'constants/about';
-import { GRAY900 } from 'constants/colors';
-import { eng16 } from 'constants/fonts';
-import { CONTENT, CONTENTS, HEADING } from 'constants/styles';
+import SectionTitle from 'components/Common/SectionTitle';
+import { eng14, eng16 } from 'constants/fonts';
 import React, { useEffect, useState } from 'react';
 import getMore from 'services/contact/get-more';
 import styled from 'styled-components';
@@ -20,39 +19,47 @@ const MoreInformationComponent = () => {
 
   return more.length > 0 ? (
     <Container>
-      <Heading>More Information</Heading>
-      <Contents>
+      <SectionTitle>More Information</SectionTitle>
+      <SectionContent>
         {more.map(({ id, name, url }) => (
-          <Content key={id}>
+          <ContentItem key={id}>
             <Name>
               <a href={url}>{name}</a>
             </Name>
-          </Content>
+          </ContentItem>
         ))}
-      </Contents>
+      </SectionContent>
     </Container>
   ) : null;
 };
 
 export default MoreInformationComponent;
 
-const Container = styled.div``;
+const Container = styled.div`
+  flex: 0 1 17.375rem;
 
-const Heading = styled.h2`
-  ${HEADING};
+  @media ${({ theme }) => theme.device.mobile} {
+    flex: initial;
+  }
 `;
 
-const Contents = styled.div`
-  ${CONTENTS};
+const SectionContent = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 1rem;
+  row-gap: 0.5rem;
 `;
 
-const Content = styled.div`
-  ${CONTENT};
+const ContentItem = styled.div`
+  ${eng16};
+  color: ${({ theme }) => theme.detailsColor};
+
+  @media ${({ theme }) => theme.device.mobile} {
+    ${eng14};
+  }
 `;
 
 const Name = styled.h4`
-  ${eng16};
-  color: ${GRAY900};
   text-decoration: underline;
   text-transform: capitalize;
 `;
