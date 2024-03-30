@@ -51,15 +51,18 @@ const SectionContent = styled.div`
 `;
 
 const ContentItem = styled.div`
-  ${eng16};
-  color: ${({ theme }) => theme.detailsColor};
+  a {
+    ${eng16};
+    color: ${({ theme }) => theme.detailsColor};
 
-  @media ${({ theme }) => theme.device.mobile} {
-    ${eng14};
+    @media ${({ theme }) => theme.device.mobile} {
+      ${eng14};
+    }
   }
 `;
 
 const Name = styled.h4`
   text-decoration: underline;
+  text-decoration-color: ${({ theme }) => theme.detailsColor};
   text-transform: capitalize;
 `;

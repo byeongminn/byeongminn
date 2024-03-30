@@ -20,6 +20,7 @@ const Container = styled.div`
   margin: 0 auto;
   padding: 3rem 3rem 0 3rem;
   max-width: 90rem;
+  background-color: ${({ theme }) => theme.bgColor};
 
   @media ${({ theme }) => theme.device.tablet} {
     padding: 2rem 2rem 0 2rem;
