@@ -1,5 +1,4 @@
-import { GRAY600 } from 'constants/colors';
-import { eng14 } from 'constants/fonts';
+import { eng12, eng14 } from 'constants/fonts';
 import React from 'react';
 import styled from 'styled-components';
 
@@ -21,6 +20,11 @@ const Container = styled.div`
 
 const Copyright = styled.h5`
   ${eng14};
-  color: ${GRAY600};
+  color: ${({ theme }) => theme.footerColor};
   text-align: right;
+
+  @media ${({ theme }) => theme.device.mobile} {
+    ${eng12};
+    text-align: center;
+  }
 `;

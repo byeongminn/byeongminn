@@ -26,6 +26,9 @@ const Container = styled.div`
 
 const Cue = styled.section`
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  row-gap: 3rem;
 `;
 
 const Notes = styled.section`

@@ -1,6 +1,5 @@
-import { GRAY900 } from 'constants/colors';
-import { kor18 } from 'constants/fonts';
-import { CONTENT, CONTENTS, HEADING } from 'constants/styles';
+import SectionTitle from 'components/Common/SectionTitle';
+import { eng14, eng14M, eng16, kor14M, kor18 } from 'constants/fonts';
 import React, { useEffect, useState } from 'react';
 import getProfile from 'services/about/get-profile';
 import styled from 'styled-components';
@@ -19,46 +18,55 @@ const ProfileComponent = () => {
 
   return Object.keys(profile).length !== 0 ? (
     <Container>
-      <Heading>Profile</Heading>
-      <Contents>
+      <SectionTitle>Profile</SectionTitle>
+      <SectionContent>
         {profile.name && profile.englishName ? (
-          <Content>
+          <ContentItem>
             <Name>{profile.name}</Name>
             <EnglishName>{profile.englishName}</EnglishName>
-          </Content>
+          </ContentItem>
         ) : null}
-        {profile.birth ? <Content>{profile.birth}</Content> : null}
-        {profile.address ? <Content>{profile.address}</Content> : null}
-        {profile.number ? <Content>{profile.number}</Content> : null}
-        {profile.email ? <Content>{profile.email}</Content> : null}
-      </Contents>
+        {profile.birth ? <ContentItem>{profile.birth}</ContentItem> : null}
+        {profile.address ? <ContentItem>{profile.address}</ContentItem> : null}
+        {profile.number ? <ContentItem>{profile.number}</ContentItem> : null}
+        {profile.email ? <ContentItem>{profile.email}</ContentItem> : null}
+      </SectionContent>
     </Container>
   ) : null;
 };
 
 export default ProfileComponent;
 
-const Container = styled.div`
-  margin-bottom: 3rem;
+const Container = styled.div``;
+
+const SectionContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+
+  @media ${({ theme }) => theme.device.mobile} {
+    row-gap: 0.25rem;
+  }
 `;
 
-const Heading = styled.h2`
-  ${HEADING};
-`;
+const ContentItem = styled.div`
+  display: flex;
+  column-gap: 0.125rem;
+  ${eng16};
+  color: ${({ theme }) => theme.detailsColor};
 
-const Contents = styled.div`
-  ${CONTENTS};
-`;
-
-const Content = styled.div`
-  ${CONTENT}
-  color: ${GRAY900};
+  @media ${({ theme }) => theme.device.mobile} {
+    ${eng14};
+  }
 `;
 
 const Name = styled.h3`
   ${kor18};
   line-height: 24px;
-  color: ${GRAY900};
+
+  @media ${({ theme }) => theme.device.mobile} {
+    ${kor14M};
+  }
 `;
 
 const EnglishName = styled.h4`
@@ -66,5 +74,8 @@ const EnglishName = styled.h4`
   font-weight: 500;
   font-size: 18px;
   line-height: 24px;
-  color: ${GRAY900};
+
+  @media ${({ theme }) => theme.device.mobile} {
+    ${eng14M};
+  }
 `;

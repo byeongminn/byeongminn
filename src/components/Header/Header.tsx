@@ -1,5 +1,4 @@
 import { Navigation } from 'components';
-import { GRAY800 } from 'constants/colors';
 import { TITLE } from 'constants/header';
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -26,6 +25,7 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   row-gap: 1rem;
+  background-color: ${({ theme }) => theme.headerBgColor};
 `;
 
 const Title = styled.div`
@@ -35,7 +35,7 @@ const Title = styled.div`
     font-size: 32px;
     line-height: 30px;
     letter-spacing: 3px;
-    color: ${GRAY800};
+    color: ${({ theme }) => theme.headerColor};
     text-transform: uppercase;
   }
 `;

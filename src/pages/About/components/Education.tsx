@@ -1,6 +1,5 @@
-import { GRAY700, GRAY800 } from 'constants/colors';
-import { eng14, kor16, kor18 } from 'constants/fonts';
-import { CONTENT, CONTENTS, HEADING } from 'constants/styles';
+import SectionTitle from 'components/Common/SectionTitle';
+import { eng12, eng14, kor14, kor14M, kor16, kor18 } from 'constants/fonts';
 import React, { useEffect, useState } from 'react';
 import getEducation from 'services/about/get-education';
 import styled from 'styled-components';
@@ -19,51 +18,64 @@ const EducationComponent = () => {
 
   return education.length > 0 ? (
     <Container>
-      <Heading>Education</Heading>
-      <Contents>
-        {education.map(({ id, school, major, period }: Education) => (
-          <Content key={id}>
+      <SectionTitle>Education</SectionTitle>
+      <SectionContent>
+        {education.map(({ id, school, major, period }) => (
+          <ContentItem key={id}>
             <School>{school}</School>
             <Major>{major}</Major>
             <Period>{period}</Period>
-          </Content>
+          </ContentItem>
         ))}
-      </Contents>
+      </SectionContent>
     </Container>
   ) : null;
 };
 
 export default EducationComponent;
 
-const Container = styled.div`
-  margin-bottom: 3rem;
-`;
+const Container = styled.div``;
 
-const Heading = styled.h2`
-  ${HEADING};
-`;
-
-const Contents = styled.div`
-  ${CONTENTS};
+const SectionContent = styled.div`
+  display: flex;
+  flex-direction: column;
   row-gap: 0.75rem;
 `;
 
-const Content = styled.div`
-  ${CONTENT};
+const ContentItem = styled.div`
+  display: flex;
+  align-items: center;
   column-gap: 2.5rem;
+  color: ${({ theme }) => theme.detailsColor};
+
+  @media ${({ theme }) => theme.device.mobile} {
+    flex-direction: column;
+    align-items: flex-start;
+    column-gap: 0;
+    row-gap: 0.5rem;
+  }
 `;
 
 const School = styled.h3`
   ${kor18};
-  color: ${GRAY800};
+
+  @media ${({ theme }) => theme.device.mobile} {
+    ${kor14M};
+  }
 `;
 
 const Major = styled.h4`
   ${kor16};
-  color: ${GRAY700};
+
+  @media ${({ theme }) => theme.device.mobile} {
+    ${kor14};
+  }
 `;
 
 const Period = styled.h4`
   ${eng14};
-  color: ${GRAY700};
+
+  @media ${({ theme }) => theme.device.mobile} {
+    ${eng12};
+  }
 `;

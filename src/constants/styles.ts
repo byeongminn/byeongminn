@@ -1,12 +1,17 @@
 import { css } from 'styled-components';
-import { eng16, eng20 } from './fonts';
-import { GRAY800, GRAY900 } from './colors';
+import { eng14, eng16, eng16M, eng20 } from './fonts';
+import { GRAY800 } from './colors';
 
 // About
 export const HEADING = css`
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.75rem;
   ${eng20};
-  color: ${GRAY900};
+  color: ${({ theme }) => theme.sectionColor};
+
+  @media screen and (max-width: 643px) {
+    margin-bottom: 1rem;
+    ${eng16M};
+  }
 `;
 
 export const CONTENTS = css`
@@ -21,4 +26,8 @@ export const CONTENT = css`
   column-gap: 0.75rem;
   ${eng16};
   color: ${GRAY800};
+
+  @media screen and (max-width: 643px) {
+    ${eng14};
+  }
 `;

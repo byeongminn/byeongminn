@@ -36,9 +36,7 @@ const DetailsComponent = () => {
 
 export default DetailsComponent;
 
-const Container = styled.div`
-  margin-bottom: 3rem;
-`;
+const Container = styled.div``;
 
 const Heading = styled.h2`
   ${HEADING};

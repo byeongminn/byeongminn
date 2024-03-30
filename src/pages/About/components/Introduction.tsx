@@ -1,6 +1,5 @@
-import { GRAY800 } from 'constants/colors';
-import { kor18, kor20 } from 'constants/fonts';
-import { CONTENT, CONTENTS, HEADING } from 'constants/styles';
+import SectionTitle from 'components/Common/SectionTitle';
+import { kor14, kor14M, kor18, kor20 } from 'constants/fonts';
 import React, { useEffect, useState } from 'react';
 import getIntroduction from 'services/about/get-introduction';
 import styled from 'styled-components';
@@ -19,47 +18,56 @@ const IntroductionComponent = () => {
 
   return introduction.length > 0 ? (
     <Container>
-      <Heading>Introduction</Heading>
-      <Contents>
-        {introduction.map(({ id, title, content }: Introduction) => (
-          <Content key={id}>
+      <SectionTitle>Introduction</SectionTitle>
+      <SectionContent>
+        {introduction.map(({ id, title, content }) => (
+          <ContentItem key={id}>
             <Title>{title}</Title>
             <IntroductionContent>{content}</IntroductionContent>
-          </Content>
+          </ContentItem>
         ))}
-      </Contents>
+      </SectionContent>
     </Container>
   ) : null;
 };
 
 export default IntroductionComponent;
 
-const Container = styled.div`
-  margin-bottom: 3rem;
-`;
+const Container = styled.div``;
 
-const Heading = styled.h2`
-  ${HEADING};
-`;
-
-const Contents = styled.div`
-  ${CONTENTS};
+const SectionContent = styled.div`
+  display: flex;
+  flex-direction: column;
   row-gap: 1.5rem;
 `;
 
-const Content = styled.div`
-  ${CONTENT};
-  align-items: start;
-  color: ${GRAY800};
+const ContentItem = styled.div`
+  display: flex;
+  column-gap: 0.75rem;
+  color: ${({ theme }) => theme.detailsColor};
+
+  @media ${({ theme }) => theme.device.mobile} {
+    flex-direction: column;
+    column-gap: 0;
+    row-gap: 0.25rem;
+  }
 `;
 
 const Title = styled.h4`
   flex: 1;
   ${kor20};
+
+  @media ${({ theme }) => theme.device.mobile} {
+    ${kor14M};
+  }
 `;
 
 const IntroductionContent = styled.p`
   flex: 3;
   ${kor18};
   font-weight: 400;
+
+  @media ${({ theme }) => theme.device.mobile} {
+    ${kor14};
+  }
 `;

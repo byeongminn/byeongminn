@@ -1,4 +1,3 @@
-import { GRAY600, GRAY900 } from 'constants/colors';
 import { eng16 } from 'constants/fonts';
 import { NAVIGATION } from 'constants/navigation';
 import React from 'react';
@@ -35,7 +34,8 @@ const NavList = styled.ul`
 const NavItem = styled.li<{ $isActive: boolean }>`
   a {
     ${eng16};
-    color: ${({ $isActive }) => ($isActive ? `${GRAY900}` : `${GRAY600}`)};
+    color: ${({ theme, $isActive }) =>
+      $isActive ? theme.headerColor : theme.headerActiveColor};
     text-transform: uppercase;
   }
 `;

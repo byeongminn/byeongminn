@@ -3,14 +3,20 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'index.css';
 import { BrowserRouter } from 'react-router-dom';
+import { ThemeProvider } from 'styled-components';
+import { light } from 'styles/theme';
+import media from 'styles/media';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
 );
 root.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
+  <ThemeProvider theme={{ ...light, ...media }}>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+    ,
+  </ThemeProvider>,
 );
 
 // If you want to start measuring performance in your app, pass a function

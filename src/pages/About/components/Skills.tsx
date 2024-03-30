@@ -1,4 +1,5 @@
-import { CONTENT, CONTENTS, HEADING } from 'constants/styles';
+import SectionTitle from 'components/Common/SectionTitle';
+import { eng14, eng16 } from 'constants/fonts';
 import React, { useEffect, useState } from 'react';
 import getSkills from 'services/about/get-skills';
 import styled from 'styled-components';
@@ -17,33 +18,57 @@ const SkillsComponent = () => {
 
   return skills.length > 0 ? (
     <Container>
-      <Heading>Skills</Heading>
-      <Contents>
-        {skills.map(({ id, iconUrl, name }: Skill) => (
-          <Content key={id}>
-            <img src={iconUrl} alt={name} />
+      <SectionTitle>Skills</SectionTitle>
+      <SectionContent>
+        {skills.map(({ id, iconUrl, name }) => (
+          <ContentItem key={id}>
+            <Image src={iconUrl} alt={name} />
             <h5>{name}</h5>
-          </Content>
+          </ContentItem>
         ))}
-      </Contents>
+      </SectionContent>
     </Container>
   ) : null;
 };
 
 export default SkillsComponent;
 
-const Container = styled.div`
-  margin-bottom: 3rem;
+const Container = styled.div``;
+
+const SectionContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+
+  @media ${({ theme }) => theme.device.mobile} {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 1rem;
+    row-gap: 0.75rem;
+  }
 `;
 
-const Heading = styled.h2`
-  ${HEADING};
+const ContentItem = styled.div`
+  display: flex;
+  align-items: center;
+  column-gap: 0.75rem;
+  ${eng16};
+  color: ${({ theme }) => theme.detailsColor};
+  text-transform: capitalize;
+
+  @media ${({ theme }) => theme.device.mobile} {
+    column-gap: 0.5rem;
+    ${eng14};
+  }
 `;
 
-const Contents = styled.div`
-  ${CONTENTS};
-`;
+const Image = styled.img`
+  width: 1.5rem;
+  height: 1.5rem;
 
-const Content = styled.div`
-  ${CONTENT};
+  @media ${({ theme }) => theme.device.mobile} {
+    width: 1.125rem;
+    height: 1.125rem;
+  }
 `;

@@ -8,3 +8,20 @@ export const GRAY600 = '#696969';
 export const GRAY700 = '#4D4D4D';
 export const GRAY800 = '#333333';
 export const GRAY900 = '#191919';
+
+/* Page */
+export const BACKGROUND_COLOR_LIGHT = '#ffffff';
+export const BACKGROUND_COLOR_DARK = '#1f1f1f';
+
+/* Header */
+export const HEADER_BACKGROUND_COLOR_LIGHT = '#ffffff';
+export const HEADER_BACKGROUND_COLOR_DARK = '#181818';
+export const HEADER_COLOR_LIGHT = GRAY900;
+export const HEADER_COLOR_DARK = GRAY100;
+export const HEADER_ACTIVE_COLOR_LIGHT = GRAY600;
+export const HEADER_ACTIVE_COLOR_DARK = GRAY500;
+
+/* Table */
+export const TABLE_BACKGROUND_COLOR_LIGHT = '#FAFAFA';
+export const TABLE_BACKGROUND_COLOR_DARK = '#232424';
+export const TABLE_BORDER_COLOR = GRAY500;

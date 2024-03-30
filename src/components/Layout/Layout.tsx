@@ -18,5 +18,6 @@ export default Layout;
 
 const Container = styled.div`
   margin: 0 auto;
-  width: 90rem;
+  padding-inline: 1rem;
+  max-width: 90rem;
 `;
