@@ -1,12 +1,25 @@
 import { eng12, eng14 } from 'constants/fonts';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import getProfile from 'services/about/get-profile';
 import styled from 'styled-components';
+import { Profile } from 'types';
 
 const Footer = () => {
+  const [profile, setProfile] = useState<Profile>({});
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await getProfile();
+      setProfile(data);
+    };
+    fetchData();
+  }, []);
+
   return (
     <Container>
       <Copyright>
-        Copyright ©GILDONG HONG 2021-2024 All rights reserved.
+        Copyright <strong>{profile.englishName}</strong> 2021-2024 All rights
+        reserved.
       </Copyright>
     </Container>
   );
@@ -22,6 +35,10 @@ const Copyright = styled.h5`
   ${eng14};
   color: ${({ theme }) => theme.footerColor};
   text-align: right;
+
+  > strong {
+    text-transform: uppercase;
+  }
 
   @media ${({ theme }) => theme.device.tablet} {
     ${eng12};
