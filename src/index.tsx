@@ -6,6 +6,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 import { light } from 'styles/theme';
 import media from 'styles/media';
+import { GlobalStyle } from 'styles/styles';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
@@ -13,6 +14,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <ThemeProvider theme={{ ...light, ...media }}>
     <BrowserRouter>
+      <GlobalStyle />
       <App />
     </BrowserRouter>
     ,
