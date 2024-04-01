@@ -1,6 +1,7 @@
 import {
   BACKGROUND_COLOR_DARK,
   BACKGROUND_COLOR_LIGHT,
+  GRAY100,
   GRAY300,
   GRAY400,
   GRAY500,
@@ -23,6 +24,7 @@ import { DefaultTheme } from 'styled-components';
 export const light: DefaultTheme = {
   bgColor: BACKGROUND_COLOR_LIGHT,
   headerBgColor: HEADER_BACKGROUND_COLOR_LIGHT,
+  headerBorderColor: GRAY700,
   headerColor: HEADER_COLOR_LIGHT,
   headerActiveColor: HEADER_ACTIVE_COLOR_LIGHT,
   sectionColor: GRAY900,
@@ -41,6 +43,7 @@ export const light: DefaultTheme = {
 export const dark: DefaultTheme = {
   bgColor: BACKGROUND_COLOR_DARK,
   headerBgColor: HEADER_BACKGROUND_COLOR_DARK,
+  headerBorderColor: GRAY100,
   headerColor: HEADER_COLOR_DARK,
   headerActiveColor: HEADER_ACTIVE_COLOR_DARK,
   sectionColor: GRAY400,

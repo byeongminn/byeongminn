@@ -16,6 +16,9 @@ const Navigation = () => {
           </NavItem>
         ))}
       </NavList>
+      <NavButton>
+        <img src="/assets/icons/nav.svg" alt="nav" />
+      </NavButton>
     </Container>
   );
 };
@@ -29,6 +32,10 @@ const NavList = styled.ul`
   justify-content: center;
   align-items: center;
   column-gap: 1.25rem;
+
+  @media ${({ theme }) => theme.device.tablet} {
+    display: none;
+  }
 `;
 
 const NavItem = styled.li<{ $isActive: boolean }>`
@@ -37,5 +44,20 @@ const NavItem = styled.li<{ $isActive: boolean }>`
     color: ${({ theme, $isActive }) =>
       $isActive ? theme.headerColor : theme.headerActiveColor};
     text-transform: uppercase;
+  }
+`;
+
+const NavButton = styled.button`
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  display: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  @media ${({ theme }) => theme.device.tablet} {
+    display: block;
   }
 `;

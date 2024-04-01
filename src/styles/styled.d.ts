@@ -4,6 +4,7 @@ declare module 'styled-components' {
   export interface DefualtTheme {
     bgColor: string;
     headerBgColor: string;
+    headerBorderColor: string;
     headerColor: string;
     headerActiveColor: string;
     sectionColor: string;
