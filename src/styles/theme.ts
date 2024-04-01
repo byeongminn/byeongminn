@@ -1,6 +1,7 @@
 import {
   BACKGROUND_COLOR_DARK,
   BACKGROUND_COLOR_LIGHT,
+  GRAY300,
   GRAY400,
   GRAY500,
   GRAY600,
@@ -30,6 +31,10 @@ export const light: DefaultTheme = {
   tableBorderColor: TABLE_BORDER_COLOR,
   tableNameColor: GRAY700,
   tableDescriptionColor: GRAY600,
+  linearGradient: `linear-gradient(${BACKGROUND_COLOR_LIGHT}, ${BACKGROUND_COLOR_LIGHT}), linear-gradient(to bottom, ${GRAY400} 0%, ${BACKGROUND_COLOR_LIGHT} 90%);`,
+  chipColor: GRAY600,
+  chipBgColor: GRAY300,
+  chipBorderColor: GRAY300,
   footerColor: GRAY600,
 };
 
@@ -44,5 +49,9 @@ export const dark: DefaultTheme = {
   tableBorderColor: TABLE_BORDER_COLOR,
   tableNameColor: GRAY500,
   tableDescriptionColor: GRAY500,
+  linearGradient: `linear-gradient(${BACKGROUND_COLOR_DARK}, ${BACKGROUND_COLOR_DARK}), linear-gradient(to bottom, ${GRAY700} 0%, ${BACKGROUND_COLOR_DARK} 90%);`,
+  chipColor: GRAY300,
+  chipBgColor: GRAY800,
+  chipBorderColor: GRAY800,
   footerColor: GRAY500,
 };

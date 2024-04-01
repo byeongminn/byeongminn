@@ -7,8 +7,7 @@ import {
   ProjectThreeDetails,
   ProjectTwoDetails,
 } from './components';
-import { eng16 } from 'constants/fonts';
-import { GRAY600 } from 'constants/colors';
+import { eng14, eng16 } from 'constants/fonts';
 
 const Projects = () => {
   const [activeId, setActiveId] = useState(0);
@@ -46,24 +45,35 @@ export default Projects;
 
 const Container = styled.div`
   display: flex;
-  column-gap: 1rem;
+
+  @media ${({ theme }) => theme.device.mobile} {
+    flex-direction: column;
+    row-gap: 0.5rem;
+  }
 `;
 
-const ListSection = styled.section`
-  flex: 1;
-`;
+const ListSection = styled.section``;
 
 const DetailsSection = styled.section`
-  flex: 6;
+  padding-left: 0.5rem;
+  flex: 1;
+
+  @media ${({ theme }) => theme.device.mobile} {
+    padding-left: 0;
+  }
 `;
 
 const Button = styled.button`
   padding-block: 1.5rem;
   width: 100%;
   cursor: pointer;
-  background-color: #ffffff;
-  border-block: 0.5px solid ${GRAY600};
+  background-color: transparent;
+  border-block: 0.5px solid ${({ theme }) => theme.footerColor};
   border-inline: none;
   ${eng16};
-  color: ${GRAY600};
+  color: ${({ theme }) => theme.footerColor};
+
+  @media ${({ theme }) => theme.device.mobile} {
+    ${eng14};
+  }
 `;

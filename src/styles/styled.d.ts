@@ -12,6 +12,10 @@ declare module 'styled-components' {
     tableBorderColor: string;
     tableNameColor: string;
     tableDescriptionColor: string;
+    linearGradient: string;
+    chipColor: string;
+    chipBgColor: string;
+    chipBorderColor: string;
     footerColor: string;
   }
 
