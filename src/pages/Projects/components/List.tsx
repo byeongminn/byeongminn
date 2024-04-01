@@ -6,7 +6,7 @@ import styled from 'styled-components';
 import { Project } from 'types';
 
 type Props = {
-  activeId: number;
+  activeId: string | undefined;
   onClick: (id: number) => void;
 };
 
@@ -26,7 +26,9 @@ const List = ({ activeId, onClick }: Props) => {
       {projects.map(({ id, title, chips }) => (
         <ProjectItem
           key={id}
-          $isActive={activeId === id}
+          $isActive={
+            activeId === undefined ? id === 0 : Number(activeId) === id
+          }
           onClick={() => onClick(id)}
         >
           <Logo></Logo>

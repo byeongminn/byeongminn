@@ -11,7 +11,7 @@ const Navigation = () => {
     <Container>
       <NavList>
         {NAVIGATION.map(({ id, name, url }) => (
-          <NavItem key={id} $isActive={pathname === url}>
+          <NavItem key={id} $isActive={pathname.includes(url)}>
             <Link to={url}>{name}</Link>
           </NavItem>
         ))}

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import {
   List,
@@ -8,12 +8,14 @@ import {
   ProjectTwoDetails,
 } from './components';
 import { eng14, eng16 } from 'constants/fonts';
+import { useNavigate, useParams } from 'react-router-dom';
 
 const Projects = () => {
-  const [activeId, setActiveId] = useState(0);
+  const navigate = useNavigate();
+  const { id } = useParams();
 
   const handleProjectClick = (id: number) => {
-    setActiveId(id);
+    navigate(`/projects/${id}`);
   };
 
   const handleTopClick = () => {
@@ -23,16 +25,16 @@ const Projects = () => {
   return (
     <Container>
       <ListSection>
-        <List activeId={activeId} onClick={handleProjectClick} />
+        <List activeId={id} onClick={handleProjectClick} />
       </ListSection>
       <DetailsSection>
-        {activeId + 1 === 1 ? (
+        {id === undefined || Number(id) === 0 ? (
           <ProjectOneDetails />
-        ) : activeId + 1 === 2 ? (
+        ) : Number(id) === 1 ? (
           <ProjectTwoDetails />
-        ) : activeId + 1 === 3 ? (
+        ) : Number(id) === 2 ? (
           <ProjectThreeDetails />
-        ) : activeId + 1 === 4 ? (
+        ) : Number(id) === 3 ? (
           <ProjectFourDetails />
         ) : null}
         <Button onClick={handleTopClick}>TOP</Button>
