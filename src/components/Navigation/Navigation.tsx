@@ -28,6 +28,7 @@ export default Navigation;
 const Container = styled.div``;
 
 const NavList = styled.ul`
+  padding-left: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;

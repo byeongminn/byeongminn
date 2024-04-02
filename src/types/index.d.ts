@@ -36,7 +36,7 @@ export type Project = {
   logo: string;
   title: string;
   period: string;
-  role: string;
+  roles: Array<string>;
   chips: Array<Chip>;
   link: string;
 };

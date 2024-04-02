@@ -10,7 +10,6 @@ import {
   kor18,
 } from 'constants/fonts';
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import getExperiences from 'services/about/get-experiences';
 import styled from 'styled-components';
 import { Experience } from 'types';
@@ -36,7 +35,7 @@ const ExperiencesComponent = () => {
               <Group>
                 <CompanyName>{company}</CompanyName>
                 <PositionAndJob>
-                  {position} • {job}
+                  {position} · {job}
                 </PositionAndJob>
               </Group>
               <Period>{period}</Period>
@@ -44,28 +43,36 @@ const ExperiencesComponent = () => {
             {projects.length > 0 ? (
               <>
                 <Projects>
-                  {projects.map(({ id, title, role, link }) => (
+                  {projects.map(({ id, title, roles, link }) => (
                     <Project key={id}>
                       <TableGroup>
                         <ProjectTitle>{title}</ProjectTitle>
-                        <ProjectRole>{role}</ProjectRole>
+                        <ProjectRoles>
+                          {roles.map((role, idx) => (
+                            <ProjectRole key={idx}>{role}</ProjectRole>
+                          ))}
+                        </ProjectRoles>
                       </TableGroup>
-                      <ProjectLink to={link}>
+                      <ProjectLink href={link}>
                         <img src="/assets/icons/link.svg" alt="link" />
                       </ProjectLink>
                     </Project>
                   ))}
                 </Projects>
                 <ProjectsMobile>
-                  {projects.map(({ id, title, role, link }) => (
+                  {projects.map(({ id, title, roles, link }) => (
                     <Project key={id}>
                       <TableGroup>
                         <ProjectTitle>{title}</ProjectTitle>
-                        <ProjectLink to={link}>
+                        <ProjectLink href={link}>
                           <img src="/assets/icons/link.svg" alt="link" />
                         </ProjectLink>
                       </TableGroup>
-                      <ProjectRole>{role}</ProjectRole>
+                      <ProjectRoles>
+                        {roles.map((role, idx) => (
+                          <ProjectRole key={idx}>{role}</ProjectRole>
+                        ))}
+                      </ProjectRoles>
                     </Project>
                   ))}
                 </ProjectsMobile>
@@ -93,6 +100,7 @@ const ContentItem = styled.div`
   flex-direction: column;
   row-gap: 1rem;
   color: ${({ theme }) => theme.detailsColor};
+  word-break: keep-all;
 `;
 
 const Company = styled.div`
@@ -111,7 +119,6 @@ const Company = styled.div`
 
 const Group = styled.section`
   display: flex;
-  align-items: center;
   column-gap: 1.5rem;
 
   @media ${({ theme }) => theme.device.tablet} {
@@ -167,14 +174,12 @@ const Project = styled.div`
   padding: 1rem 1.5rem;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   column-gap: 1.5rem;
   border-bottom: 1px solid ${({ theme }) => theme.tableBorderColor};
 
   @media ${({ theme }) => theme.device.tablet} {
     padding: 0.5rem;
     flex-direction: column;
-    align-items: normal;
     row-gap: 0.5rem;
   }
 `;
@@ -191,11 +196,15 @@ const ProjectTitle = styled.h4`
 
   @media ${({ theme }) => theme.device.tablet} {
     ${eng14};
+    font-weight: 500;
   }
 `;
 
-const ProjectRole = styled.h4`
+const ProjectRoles = styled.div`
   flex: 8.3;
+`;
+
+const ProjectRole = styled.h4`
   ${kor16};
   color: ${({ theme }) => theme.tableDescriptionColor};
 
@@ -204,7 +213,7 @@ const ProjectRole = styled.h4`
   }
 `;
 
-const ProjectLink = styled(Link)`
+const ProjectLink = styled.a`
   height: 1.5rem;
 
   @media ${({ theme }) => theme.device.tablet} {

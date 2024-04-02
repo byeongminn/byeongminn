@@ -24,7 +24,9 @@ const MoreInformationComponent = () => {
         {more.map(({ id, name, url }) => (
           <ContentItem key={id}>
             <Name>
-              <a href={url}>{name}</a>
+              <a href={url} target="_black">
+                {name}
+              </a>
             </Name>
           </ContentItem>
         ))}

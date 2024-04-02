@@ -43,6 +43,7 @@ const Container = styled.div`
 const Title = styled.div`
   a {
     font-family: 'Champagne';
+    font-style: italic;
     font-weight: 400;
     font-size: 32px;
     line-height: 30px;

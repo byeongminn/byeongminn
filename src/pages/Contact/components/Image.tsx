@@ -22,5 +22,6 @@ export default ImageComponent;
 const Img = styled.div<{ src: string }>`
   width: 100%;
   aspect-ratio: 16 / 9;
+  max-height: 25rem;
   background: url(${({ src }) => src}) no-repeat center / cover;
 `;
