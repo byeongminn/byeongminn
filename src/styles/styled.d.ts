@@ -7,6 +7,9 @@ declare module 'styled-components' {
     headerBorderColor: string;
     headerColor: string;
     headerActiveColor: string;
+    mobileNavBgColor: string;
+    mobileNavShadow: string;
+    mobileNavColor: string;
     sectionColor: string;
     detailsColor: string;
     tableBgColor: string;

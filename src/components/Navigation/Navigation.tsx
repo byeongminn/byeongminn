@@ -1,11 +1,17 @@
 import { eng16 } from 'constants/fonts';
 import { NAVIGATION } from 'constants/navigation';
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
+import MobileNavigation from './components/MobileNavigation';
 
 const Navigation = () => {
   const { pathname } = useLocation();
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+
+  const handleNavButtonClick = () => {
+    setIsOpen((prev) => !prev);
+  };
 
   return (
     <Container>
@@ -16,9 +22,10 @@ const Navigation = () => {
           </NavItem>
         ))}
       </NavList>
-      <NavButton>
+      <NavButton onClick={handleNavButtonClick}>
         <img src="/assets/icons/nav.svg" alt="nav" />
       </NavButton>
+      {isOpen ? <MobileNavigation onItemClick={handleNavButtonClick} /> : null}
     </Container>
   );
 };
