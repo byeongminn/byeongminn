@@ -1,14 +1,25 @@
-import { GRAY200 } from 'constants/colors';
 import React from 'react';
 import styled from 'styled-components';
 
 const ProjectOneDetails = () => {
-  return <Container>ProjectOneDetails</Container>;
+  return (
+    <Container>
+      <Thumbnail href="/assets/pdfs/sample.pdf" target="_blank">
+        <picture>
+          <source srcSet="/assets/pictures/image.webp" type="image/webp" />
+          <img src="/assets/pictures/image.jpg" alt="image" />
+        </picture>
+      </Thumbnail>
+    </Container>
+  );
 };
 
 export default ProjectOneDetails;
 
-const Container = styled.div`
-  height: 2000px;
-  background-color: ${GRAY200};
+const Container = styled.div``;
+
+const Thumbnail = styled.a`
+  img {
+    width: 100%;
+  }
 `;
