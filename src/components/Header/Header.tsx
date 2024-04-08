@@ -24,7 +24,6 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   row-gap: 1rem;
-  background-color: ${({ theme }) => theme.headerBgColor};
 
   @media ${({ theme }) => theme.device.tablet} {
     padding: 1.5rem 1rem;
