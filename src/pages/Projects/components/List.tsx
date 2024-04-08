@@ -49,7 +49,7 @@ const List = ({ activeId, onClick }: Props) => {
 export default List;
 
 const Container = styled.div`
-  padding-right: 0.5rem;
+  padding-right: 2rem;
   display: flex;
   flex-direction: column;
   row-gap: 1.5rem;
@@ -60,6 +60,7 @@ const Container = styled.div`
   border-right: 1px solid transparent;
 
   @media ${({ theme }) => theme.device.tablet} {
+    padding-right: 1rem;
     width: 8rem;
   }
 

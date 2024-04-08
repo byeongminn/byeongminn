@@ -57,8 +57,12 @@ const Container = styled.div`
 const ListSection = styled.section``;
 
 const DetailsSection = styled.section`
-  padding-left: 0.5rem;
+  padding-left: 2rem;
   flex: 1;
+
+  @media ${({ theme }) => theme.device.tablet} {
+    padding-left: 1rem;
+  }
 
   @media ${({ theme }) => theme.device.mobile} {
     padding-left: 0;
