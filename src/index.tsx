@@ -4,7 +4,7 @@ import reportWebVitals from './reportWebVitals';
 import 'index.css';
 import { BrowserRouter } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
-import { light } from 'styles/theme';
+import { dark } from 'styles/theme';
 import media from 'styles/media';
 import { GlobalStyle } from 'styles/styles';
 
@@ -12,7 +12,7 @@ const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
 );
 root.render(
-  <ThemeProvider theme={{ ...light, ...media }}>
+  <ThemeProvider theme={{ ...dark, ...media }}>
     <BrowserRouter>
       <GlobalStyle />
       <App />
