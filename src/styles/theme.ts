@@ -62,5 +62,5 @@ export const dark: DefaultTheme = {
   chipColor: GRAY300,
   chipBgColor: GRAY800,
   chipBorderColor: GRAY800,
-  footerColor: GRAY500,
+  footerColor: GRAY600,
 };
