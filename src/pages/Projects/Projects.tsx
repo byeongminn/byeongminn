@@ -66,6 +66,7 @@ const DetailsSection = styled.section`
 `;
 
 const Button = styled.button`
+  margin-top: 4.5rem;
   padding-block: 1.5rem;
   width: 100%;
   cursor: pointer;

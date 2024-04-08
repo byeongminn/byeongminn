@@ -18,9 +18,9 @@ const About = () => {
       </Cue>
       <Notes>
         <Introduction />
-        <Education />
         <Experiences />
         <Awards />
+        <Education />
       </Notes>
     </Container>
   );

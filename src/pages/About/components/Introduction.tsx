@@ -1,5 +1,5 @@
 import SectionTitle from 'components/Common/SectionTitle';
-import { kor14, kor14M, kor18, kor20 } from 'constants/fonts';
+import { kor14, kor16, kor18, kor20 } from 'constants/fonts';
 import React, { useEffect, useState } from 'react';
 import getIntroduction from 'services/about/get-introduction';
 import styled from 'styled-components';
@@ -45,6 +45,7 @@ const ContentItem = styled.div`
   display: flex;
   column-gap: 0.75rem;
   color: ${({ theme }) => theme.detailsColor};
+  word-break: keep-all;
 
   @media ${({ theme }) => theme.device.tablet} {
     flex-direction: column;
@@ -58,7 +59,8 @@ const Title = styled.h4`
   ${kor20};
 
   @media ${({ theme }) => theme.device.tablet} {
-    ${kor14M};
+    ${kor16};
+    font-weight: 500;
   }
 `;
 
@@ -66,6 +68,7 @@ const IntroductionContent = styled.p`
   flex: 3;
   ${kor18};
   font-weight: 400;
+  line-height: 30px;
 
   @media ${({ theme }) => theme.device.tablet} {
     ${kor14};
