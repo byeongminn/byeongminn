@@ -1,16 +1,26 @@
 import { Navigation } from 'components';
 import { TITLE } from 'constants/header';
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+
+  const handleTitleClick = () => {
+    if (isOpen) {
+      setIsOpen(false);
+    }
+  };
+
   return (
     <Container>
       <Title>
-        <Link to="/">{TITLE}</Link>
+        <Link to="/" onClick={handleTitleClick}>
+          {TITLE}
+        </Link>
       </Title>
-      <Navigation />
+      <Navigation isOpen={isOpen} setIsOpen={setIsOpen} />
     </Container>
   );
 };
