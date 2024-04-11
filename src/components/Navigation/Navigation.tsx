@@ -1,6 +1,6 @@
 import { eng16 } from 'constants/fonts';
 import { NAVIGATION } from 'constants/navigation';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 import MobileNavigation from './components/MobileNavigation';
@@ -8,6 +8,22 @@ import MobileNavigation from './components/MobileNavigation';
 const Navigation = () => {
   const { pathname } = useLocation();
   const [isOpen, setIsOpen] = useState<boolean>(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 991) {
+        setIsOpen(false);
+      }
+    };
+
+    if (isOpen) {
+      window.addEventListener('resize', handleResize);
+    }
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [isOpen]);
 
   const handleNavButtonClick = () => {
     setIsOpen((prev) => !prev);

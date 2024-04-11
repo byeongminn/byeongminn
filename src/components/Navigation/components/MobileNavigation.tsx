@@ -1,3 +1,4 @@
+import Portal from 'components/Common/Portal';
 import { eng14, eng16, kor14M } from 'constants/fonts';
 import { NAVIGATION } from 'constants/navigation';
 import React, { useEffect, useState } from 'react';
@@ -23,30 +24,32 @@ const MobileNavigationComponent = ({ onItemClick }: Props) => {
   }, []);
 
   return (
-    <Container>
-      <NavSection>
-        <NavList>
-          {NAVIGATION.map(({ id, name, url }) => (
-            <NavItem
-              key={id}
-              $isActive={pathname.includes(url)}
-              onClick={onItemClick}
-            >
-              <Link to={url}>{name}</Link>
-            </NavItem>
-          ))}
-        </NavList>
-      </NavSection>
-      <ProfileSection>
-        <ProfileList>
-          <ProfileItem>
-            {profile.name} {profile.englishName}
-          </ProfileItem>
-          <ProfileItem>{profile.number}</ProfileItem>
-          <ProfileItem>{profile.email}</ProfileItem>
-        </ProfileList>
-      </ProfileSection>
-    </Container>
+    <Portal>
+      <Container>
+        <NavSection>
+          <NavList>
+            {NAVIGATION.map(({ id, name, url }) => (
+              <NavItem
+                key={id}
+                $isActive={pathname.includes(url)}
+                onClick={onItemClick}
+              >
+                <Link to={url}>{name}</Link>
+              </NavItem>
+            ))}
+          </NavList>
+        </NavSection>
+        <ProfileSection>
+          <ProfileList>
+            <ProfileItem>
+              {profile.name} {profile.englishName}
+            </ProfileItem>
+            <ProfileItem>{profile.number}</ProfileItem>
+            <ProfileItem>{profile.email}</ProfileItem>
+          </ProfileList>
+        </ProfileSection>
+      </Container>
+    </Portal>
   );
 };
 
