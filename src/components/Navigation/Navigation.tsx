@@ -76,6 +76,7 @@ const NavButton = styled.button`
   background-color: transparent;
   border: none;
   display: none;
+  height: 1.5rem;
 
   &:hover {
     cursor: pointer;

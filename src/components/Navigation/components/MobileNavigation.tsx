@@ -57,7 +57,7 @@ export default MobileNavigationComponent;
 
 const Container = styled.div`
   position: fixed;
-  top: 77px;
+  top: 73px;
   right: 0;
   bottom: 0;
   background-color: ${({ theme }) => theme.mobileNavBgColor};

@@ -32,7 +32,7 @@ const Container = styled.div`
     align-items: center;
     row-gap: 0;
     background-color: ${({ theme }) => theme.bgColor};
-    border-bottom: 0.2px solid ${({ theme }) => theme.headerBorderColor};
+    border-bottom: 1px solid ${({ theme }) => theme.headerBorderColor};
     position: fixed;
     top: 0;
     left: 0;
