@@ -1,16 +1,15 @@
 import { GRAY400 } from 'constants/colors';
 import { eng12, eng14, kor14, kor18 } from 'constants/fonts';
 import React, { useEffect, useState } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 import getProjects from 'services/projects/get-projects';
 import styled from 'styled-components';
 import { Project } from 'types';
 
-type Props = {
-  activeId: string | undefined;
-  onClick: (id: number) => void;
-};
+const List = () => {
+  const navigate = useNavigate();
+  const { id } = useParams();
 
-const List = ({ activeId, onClick }: Props) => {
   const [projects, setProjects] = useState<Array<Project>>([]);
 
   useEffect(() => {
@@ -21,21 +20,25 @@ const List = ({ activeId, onClick }: Props) => {
     fetchData();
   }, []);
 
+  const handleItemClick = (id: number) => {
+    navigate(`/projects/${id}`);
+  };
+
   return projects.length > 0 ? (
     <Container>
-      {projects.map(({ id, title, chips }) => (
+      {projects.map((project) => (
         <ProjectItem
-          key={id}
+          key={project.id}
           $isActive={
-            activeId === undefined ? id === 0 : Number(activeId) === id
+            id === undefined ? project.id === 0 : Number(id) === project.id
           }
-          onClick={() => onClick(id)}
+          onClick={() => handleItemClick(project.id)}
         >
           <Logo></Logo>
           <Content>
-            <Title>{title}</Title>
+            <Title>{project.title}</Title>
             <Chips>
-              {chips.map(({ id, name }) => (
+              {project.chips.map(({ id, name }) => (
                 <Chip key={id}>{name}</Chip>
               ))}
             </Chips>
@@ -105,6 +108,7 @@ const Content = styled.div`
   display: flex;
   flex-direction: column;
   row-gap: 0.5rem;
+  white-space: nowrap;
 
   @media ${({ theme }) => theme.device.mobile} {
     row-gap: 0.25rem;
@@ -130,6 +134,7 @@ const Chips = styled.div`
 
   @media ${({ theme }) => theme.device.mobile} {
     flex-wrap: nowrap;
+    justify-content: flex-start;
   }
 `;
 

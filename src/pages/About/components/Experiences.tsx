@@ -53,9 +53,11 @@ const ExperiencesComponent = () => {
                           ))}
                         </ProjectRoles>
                       </TableGroup>
-                      <ProjectLink href={link}>
-                        <img src="/assets/icons/link.svg" alt="link" />
-                      </ProjectLink>
+                      {link ? (
+                        <ProjectLink href={link}>
+                          <img src="/assets/icons/link.svg" alt="link" />
+                        </ProjectLink>
+                      ) : null}
                     </Project>
                   ))}
                 </Projects>
@@ -64,9 +66,11 @@ const ExperiencesComponent = () => {
                     <Project key={id}>
                       <TableGroup>
                         <ProjectTitle>{title}</ProjectTitle>
-                        <ProjectLink href={link}>
-                          <img src="/assets/icons/link.svg" alt="link" />
-                        </ProjectLink>
+                        {link ? (
+                          <ProjectLink href={link}>
+                            <img src="/assets/icons/link.svg" alt="link" />
+                          </ProjectLink>
+                        ) : null}
                       </TableGroup>
                       <ProjectRoles>
                         {roles.map((role, idx) => (

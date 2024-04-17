@@ -71,3 +71,17 @@ export type Beyond = {
 export type Image = {
   url?: string;
 };
+
+export type Detail = {
+  id: string;
+  thumbnail?: string;
+  overview?: string;
+  background?: Array<string>;
+  duration?: string;
+  members?: string;
+  skills?: string;
+  features?: Array<string>;
+  role?: Array<string>;
+  collaboration?: Array<string>;
+  performance?: Array<string>;
+};
