@@ -29,61 +29,65 @@ const ExperiencesComponent = () => {
     <Container>
       <SectionTitle>Experiences</SectionTitle>
       <SectionContent>
-        {experiences.map(({ id, company, position, job, period, projects }) => (
-          <ContentItem key={id}>
-            <Company>
-              <Group>
-                <CompanyName>{company}</CompanyName>
-                <PositionAndJob>
-                  {position} · {job}
-                </PositionAndJob>
-              </Group>
-              <Period>{period}</Period>
-            </Company>
-            {projects.length > 0 ? (
-              <>
-                <Projects>
-                  {projects.map(({ id, title, roles, link }) => (
-                    <Project key={id}>
-                      <TableGroup>
-                        <ProjectTitle>{title}</ProjectTitle>
+        {experiences.map(
+          ({ id, company, position, job, duration, projects }) => (
+            <ContentItem key={id}>
+              <Company>
+                <Group>
+                  <CompanyName>{company}</CompanyName>
+                  <PositionAndJob>
+                    {position} · {job}
+                  </PositionAndJob>
+                </Group>
+                <Duration>{duration}</Duration>
+              </Company>
+              {projects.length > 0 ? (
+                <>
+                  <Projects>
+                    {projects.map(({ id, title, roles, link }) => (
+                      <Project key={id}>
+                        <TableGroup>
+                          <ProjectTitle>{title}</ProjectTitle>
+                          <ProjectRoles>
+                            {roles.map((role, idx) => (
+                              <ProjectRole key={idx}>{role}</ProjectRole>
+                            ))}
+                          </ProjectRoles>
+                        </TableGroup>
+                        {link ? (
+                          <ProjectLink href={link}>
+                            <img src="/assets/icons/link.svg" alt="link" />
+                          </ProjectLink>
+                        ) : (
+                          <div style={{ width: '1.5rem' }} />
+                        )}
+                      </Project>
+                    ))}
+                  </Projects>
+                  <ProjectsMobile>
+                    {projects.map(({ id, title, roles, link }) => (
+                      <Project key={id}>
+                        <TableGroup>
+                          <ProjectTitle>{title}</ProjectTitle>
+                          {link ? (
+                            <ProjectLink href={link}>
+                              <img src="/assets/icons/link.svg" alt="link" />
+                            </ProjectLink>
+                          ) : null}
+                        </TableGroup>
                         <ProjectRoles>
                           {roles.map((role, idx) => (
                             <ProjectRole key={idx}>{role}</ProjectRole>
                           ))}
                         </ProjectRoles>
-                      </TableGroup>
-                      {link ? (
-                        <ProjectLink href={link}>
-                          <img src="/assets/icons/link.svg" alt="link" />
-                        </ProjectLink>
-                      ) : null}
-                    </Project>
-                  ))}
-                </Projects>
-                <ProjectsMobile>
-                  {projects.map(({ id, title, roles, link }) => (
-                    <Project key={id}>
-                      <TableGroup>
-                        <ProjectTitle>{title}</ProjectTitle>
-                        {link ? (
-                          <ProjectLink href={link}>
-                            <img src="/assets/icons/link.svg" alt="link" />
-                          </ProjectLink>
-                        ) : null}
-                      </TableGroup>
-                      <ProjectRoles>
-                        {roles.map((role, idx) => (
-                          <ProjectRole key={idx}>{role}</ProjectRole>
-                        ))}
-                      </ProjectRoles>
-                    </Project>
-                  ))}
-                </ProjectsMobile>
-              </>
-            ) : null}
-          </ContentItem>
-        ))}
+                      </Project>
+                    ))}
+                  </ProjectsMobile>
+                </>
+              ) : null}
+            </ContentItem>
+          ),
+        )}
       </SectionContent>
     </Container>
   ) : null;
@@ -146,7 +150,7 @@ const PositionAndJob = styled.div`
   }
 `;
 
-const Period = styled.h4`
+const Duration = styled.h4`
   ${eng16}
 
   @media ${({ theme }) => theme.device.tablet} {

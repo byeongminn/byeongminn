@@ -46,8 +46,13 @@ export type Experience = {
   company: string;
   position: string;
   job: string;
-  period: string;
-  projects: Array<Project>;
+  duration: string;
+  projects: Array<{
+    id: number;
+    title: string;
+    roles: Array<string>;
+    link: string;
+  }>;
 };
 
 export type Award = {
