@@ -102,10 +102,12 @@ const ProfileList = styled.ul`
 `;
 
 const ProfileItem = styled.li`
+  height: 1.125rem;
   ${eng14};
   color: ${({ theme }) => theme.mobileNavColor};
 
   &:first-of-type {
+    height: 1.25rem;
     ${kor14M};
   }
 `;
