@@ -1,24 +1,17 @@
 import { GRAY400 } from 'constants/colors';
 import { eng12, eng14, kor14, kor18 } from 'constants/fonts';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import getProjects from 'services/projects/get-projects';
 import styled from 'styled-components';
 import { Project } from 'types';
 
-const List = () => {
+interface Props {
+  projects: Array<Project>;
+}
+
+const ListComponent = ({ projects }: Props) => {
   const navigate = useNavigate();
   const { id } = useParams();
-
-  const [projects, setProjects] = useState<Array<Project>>([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const data = await getProjects();
-      setProjects(data);
-    };
-    fetchData();
-  }, []);
 
   const handleItemClick = (id: number) => {
     navigate(`/projects/${id}`);
@@ -49,7 +42,7 @@ const List = () => {
   ) : null;
 };
 
-export default List;
+export default ListComponent;
 
 const Container = styled.div`
   padding-right: 2rem;

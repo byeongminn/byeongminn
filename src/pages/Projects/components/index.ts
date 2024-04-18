@@ -1,2 +1,2 @@
 export { default as List } from './List';
-export { default as Detail } from './Project';
+export { default as Details } from './Project';

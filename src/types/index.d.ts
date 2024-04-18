@@ -35,10 +35,8 @@ export type Project = {
   id: number;
   logo: string;
   title: string;
-  period: string;
-  roles: Array<string>;
   chips: Array<Chip>;
-  link: string;
+  details: Details;
 };
 
 export type Experience = {
@@ -77,8 +75,7 @@ export type Image = {
   url?: string;
 };
 
-export type Detail = {
-  id: string;
+export type Details = {
   thumbnail?: string;
   overview?: string;
   background?: Array<string>;

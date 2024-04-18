@@ -1,106 +1,96 @@
 import { eng14, eng16, kor14, kor16, kor20 } from 'constants/fonts';
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import getDetails from 'services/projects/get-details';
+import React from 'react';
 import styled from 'styled-components';
-import { Detail } from 'types';
+import { Details } from 'types';
 
-const ProjectComponent = () => {
-  const { id } = useParams();
+interface Props {
+  details: Details;
+}
 
-  const [detail, setDetail] = useState<Detail>();
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const data = await getDetails();
-      setDetail(data[Number(id) || 0]);
-    };
-    fetchData();
-  }, [id]);
-
+const ProjectComponent = ({ details }: Props) => {
   const handleTopClick = () => {
     window.scrollTo(0, 0);
   };
 
   return (
     <Container>
-      {detail ? (
+      {details ? (
         <>
-          {detail.thumbnail ? (
+          {details.thumbnail ? (
             <ImageSection>
               <picture>
                 <source
-                  srcSet={`/assets/pictures/${detail.thumbnail}.webp`}
+                  srcSet={`/assets/pictures/${details.thumbnail}.webp`}
                   type="image/webp"
                 />
                 <img
-                  src={`/assets/pictures/${detail.thumbnail}.jpg`}
+                  src={`/assets/pictures/${details.thumbnail}.jpg`}
                   alt="image"
                 />
               </picture>
             </ImageSection>
           ) : null}
           <ContentSection>
-            {detail.overview ? (
+            {details.overview ? (
               <ContentWrapper>
                 <H>프로젝트 개요</H>
-                <P>{detail.overview}</P>
+                <P>{details.overview}</P>
               </ContentWrapper>
             ) : null}
-            {detail.background?.length ? (
+            {details.background?.length ? (
               <ContentWrapper>
                 <H>프로젝트 배경</H>
-                {detail.background.map((item, index) => (
+                {details.background.map((item, index) => (
                   <P key={index}>{item}</P>
                 ))}
               </ContentWrapper>
             ) : null}
-            {detail.duration ? (
+            {details.duration ? (
               <ContentWrapper>
                 <H>기간</H>
-                <P>{detail.duration}</P>
+                <P>{details.duration}</P>
               </ContentWrapper>
             ) : null}
-            {detail.members ? (
+            {details.members ? (
               <ContentWrapper>
                 <H>구성 팀원</H>
-                <P>{detail.members}</P>
+                <P>{details.members}</P>
               </ContentWrapper>
             ) : null}
-            {detail.skills ? (
+            {details.skills ? (
               <ContentWrapper>
                 <H>기술 스택</H>
-                <P>{detail.skills}</P>
+                <P>{details.skills}</P>
               </ContentWrapper>
             ) : null}
-            {detail.features?.length ? (
+            {details.features?.length ? (
               <ContentWrapper>
                 <H>주요 기능</H>
-                {detail.features.map((item, index) => (
+                {details.features.map((item, index) => (
                   <P key={index}>{item}</P>
                 ))}
               </ContentWrapper>
             ) : null}
-            {detail.role?.length ? (
+            {details.role?.length ? (
               <ContentWrapper>
                 <H>담당 역할</H>
-                {detail.role.map((item, index) => (
+                {details.role.map((item, index) => (
                   <P key={index}>{item}</P>
                 ))}
               </ContentWrapper>
             ) : null}
-            {detail.collaboration?.length ? (
+            {details.collaboration?.length ? (
               <ContentWrapper>
                 <H>협업 방식</H>
-                {detail.collaboration.map((item, index) => (
+                {details.collaboration.map((item, index) => (
                   <P key={index}>{item}</P>
                 ))}
               </ContentWrapper>
             ) : null}
-            {detail.performance?.length ? (
+            {details.performance?.length ? (
               <ContentWrapper>
                 <H>성과 및 배운 점</H>
-                {detail.performance.map((item, index) => (
+                {details.performance.map((item, index) => (
                   <P key={index}>{item}</P>
                 ))}
               </ContentWrapper>

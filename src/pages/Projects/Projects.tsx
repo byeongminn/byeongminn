@@ -1,15 +1,32 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { Detail, List } from './components';
+import { Details, List } from './components';
+import getProjects from 'services/projects/get-projects';
+import { Project } from 'types';
+import { useParams } from 'react-router-dom';
 
 const Projects = () => {
+  const { id } = useParams();
+
+  const [projects, setProjects] = useState<Array<Project>>([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await getProjects();
+      setProjects(data);
+    };
+    fetchData();
+  }, []);
+
   return (
     <Container>
       <ListSection>
-        <List />
+        <List projects={projects} />
       </ListSection>
       <DetailsSection>
-        <Detail />
+        {projects.length > 0 ? (
+          <Details details={projects[Number(id) || 0]?.details} />
+        ) : null}
       </DetailsSection>
     </Container>
   );
