@@ -9,12 +9,15 @@ import {
   kor16,
   kor18,
 } from 'constants/fonts';
+import { useThemeActions } from 'context/ThemeProvider';
 import React, { useEffect, useState } from 'react';
 import getExperiences from 'services/about/get-experiences';
 import styled from 'styled-components';
 import { Experience } from 'types';
 
 const ExperiencesComponent = () => {
+  const { theme } = useThemeActions();
+
   const [experiences, setExperiences] = useState<Array<Experience>>([]);
 
   useEffect(() => {
@@ -56,7 +59,10 @@ const ExperiencesComponent = () => {
                         </TableGroup>
                         {link ? (
                           <ProjectLink href={link}>
-                            <img src="/assets/icons/link.svg" alt="link" />
+                            <img
+                              src={`/assets/icons/link-${theme}.svg`}
+                              alt="link"
+                            />
                           </ProjectLink>
                         ) : (
                           <div style={{ width: '1.5rem' }} />
@@ -71,7 +77,10 @@ const ExperiencesComponent = () => {
                           <ProjectTitle>{title}</ProjectTitle>
                           {link ? (
                             <ProjectLink href={link}>
-                              <img src="/assets/icons/link.svg" alt="link" />
+                              <img
+                                src={`/assets/icons/link-${theme}.svg`}
+                                alt="link"
+                              />
                             </ProjectLink>
                           ) : null}
                         </TableGroup>

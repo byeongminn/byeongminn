@@ -6,6 +6,7 @@ import styled from 'styled-components';
 
 import ThemeButton from 'components/Header/components/ThemeButton';
 import MobileNavigationComponent from './MobileNavigation';
+import { useThemeActions } from 'context/ThemeProvider';
 
 interface Props {
   isOpen: boolean;
@@ -14,6 +15,7 @@ interface Props {
 
 const Navigation = ({ isOpen, setIsOpen }: Props) => {
   const { pathname } = useLocation();
+  const { theme } = useThemeActions();
 
   useEffect(() => {
     const handleResize = () => {
@@ -49,7 +51,7 @@ const Navigation = ({ isOpen, setIsOpen }: Props) => {
       <ButtonSection>
         <ThemeButton />
         <NavButton onClick={handleNavButtonClick}>
-          <img src="/assets/icons/nav.svg" alt="nav" />
+          <img src={`/assets/icons/nav-${theme}.svg`} alt="nav" />
         </NavButton>
       </ButtonSection>
       {isOpen ? (

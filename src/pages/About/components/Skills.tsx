@@ -1,11 +1,14 @@
 import SectionTitle from 'components/Common/SectionTitle';
 import { eng14, eng16 } from 'constants/fonts';
+import { useThemeActions } from 'context/ThemeProvider';
 import React, { useEffect, useState } from 'react';
 import getSkills from 'services/about/get-skills';
 import styled from 'styled-components';
 import { Skill } from 'types';
 
 const SkillsComponent = () => {
+  const { theme } = useThemeActions();
+
   const [skills, setSkills] = useState<Array<Skill>>([]);
 
   useEffect(() => {
@@ -20,9 +23,9 @@ const SkillsComponent = () => {
     <Container>
       <SectionTitle>Skills</SectionTitle>
       <SectionContent>
-        {skills.map(({ id, iconUrl, name }) => (
+        {skills.map(({ id, name }) => (
           <ContentItem key={id}>
-            <Image src={iconUrl} alt={name} />
+            <Image src={`/assets/icons/${name}-${theme}.svg`} alt={name} />
             <h5>{name}</h5>
           </ContentItem>
         ))}
