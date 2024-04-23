@@ -16,6 +16,14 @@ const MobileNavigationComponent = ({ onItemClick }: Props) => {
   const [profile, setProfile] = useState<Profile>({});
 
   useEffect(() => {
+    document.body.style.overflow = 'hidden';
+
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, []);
+
+  useEffect(() => {
     const fetchData = async () => {
       const data = await getProfile();
       setProfile(data);
@@ -25,6 +33,7 @@ const MobileNavigationComponent = ({ onItemClick }: Props) => {
 
   return (
     <Portal>
+      <Dimmed onClick={onItemClick} />
       <Container>
         <NavSection>
           <NavList>
@@ -66,6 +75,16 @@ const Container = styled.div`
   width: 65%;
   display: flex;
   flex-direction: column;
+  z-index: 1000;
+`;
+
+const Dimmed = styled.div`
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 800;
 `;
 
 const NavSection = styled.section`
