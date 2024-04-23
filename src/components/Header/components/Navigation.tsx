@@ -3,7 +3,9 @@ import { NAVIGATION } from 'constants/navigation';
 import React, { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
-import MobileNavigation from './components/MobileNavigation';
+
+import ThemeButton from 'components/Header/components/ThemeButton';
+import MobileNavigationComponent from './MobileNavigation';
 
 interface Props {
   isOpen: boolean;
@@ -35,17 +37,24 @@ const Navigation = ({ isOpen, setIsOpen }: Props) => {
 
   return (
     <Container>
-      <NavList>
-        {NAVIGATION.map(({ id, name, url }) => (
-          <NavItem key={id} $isActive={pathname.includes(url)}>
-            <Link to={url}>{name}</Link>
-          </NavItem>
-        ))}
-      </NavList>
-      <NavButton onClick={handleNavButtonClick}>
-        <img src="/assets/icons/nav.svg" alt="nav" />
-      </NavButton>
-      {isOpen ? <MobileNavigation onItemClick={handleNavButtonClick} /> : null}
+      <NavListSection>
+        <NavList>
+          {NAVIGATION.map(({ id, name, url }) => (
+            <NavItem key={id} $isActive={pathname.includes(url)}>
+              <Link to={url}>{name}</Link>
+            </NavItem>
+          ))}
+        </NavList>
+      </NavListSection>
+      <ButtonSection>
+        <ThemeButton />
+        <NavButton onClick={handleNavButtonClick}>
+          <img src="/assets/icons/nav.svg" alt="nav" />
+        </NavButton>
+      </ButtonSection>
+      {isOpen ? (
+        <MobileNavigationComponent onItemClick={handleNavButtonClick} />
+      ) : null}
     </Container>
   );
 };
@@ -54,16 +63,18 @@ export default Navigation;
 
 const Container = styled.div``;
 
+const NavListSection = styled.section`
+  @media ${({ theme }) => theme.device.tablet} {
+    display: none;
+  }
+`;
+
 const NavList = styled.ul`
   padding-left: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
   column-gap: 1.25rem;
-
-  @media ${({ theme }) => theme.device.tablet} {
-    display: none;
-  }
 `;
 
 const NavItem = styled.li<{ $isActive: boolean }>`
@@ -75,18 +86,22 @@ const NavItem = styled.li<{ $isActive: boolean }>`
   }
 `;
 
+const ButtonSection = styled.section`
+  display: none;
+
+  @media ${({ theme }) => theme.device.tablet} {
+    display: flex;
+    column-gap: 0.5rem;
+  }
+`;
+
 const NavButton = styled.button`
   padding: 0;
   background-color: transparent;
   border: none;
-  display: none;
   height: 1.5rem;
 
   &:hover {
     cursor: pointer;
-  }
-
-  @media ${({ theme }) => theme.device.tablet} {
-    display: block;
   }
 `;

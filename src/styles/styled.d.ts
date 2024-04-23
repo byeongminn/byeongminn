@@ -1,9 +1,8 @@
 import 'styled-components';
 
 declare module 'styled-components' {
-  export interface DefualtTheme {
+  export interface DefaultTheme {
     bgColor: string;
-    headerBgColor: string;
     headerBorderColor: string;
     headerColor: string;
     headerActiveColor: string;

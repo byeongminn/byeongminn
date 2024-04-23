@@ -87,3 +87,5 @@ export type Details = {
   collaboration?: Array<string>;
   performance?: Array<string>;
 };
+
+export type Theme = 'light' | 'dark';

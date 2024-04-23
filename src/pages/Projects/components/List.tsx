@@ -1,4 +1,3 @@
-import { GRAY400 } from 'constants/colors';
 import { eng12, eng14, kor14, kor18 } from 'constants/fonts';
 import React from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
@@ -90,7 +89,7 @@ const ProjectItem = styled.div<{ $isActive: boolean }>`
 
 const Logo = styled.div`
   aspect-ratio: 4 / 3;
-  background-color: ${GRAY400};
+  background-color: #e1e5ed;
 
   @media ${({ theme }) => theme.device.mobile} {
     width: 2.5rem;

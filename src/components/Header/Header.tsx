@@ -1,8 +1,9 @@
-import { Navigation } from 'components';
 import { TITLE } from 'constants/header';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import ThemeButton from './components/ThemeButton';
+import Navigation from './components/Navigation';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -15,12 +16,19 @@ const Header = () => {
 
   return (
     <Container>
-      <Title>
-        <Link to="/" onClick={handleTitleClick}>
-          {TITLE}
-        </Link>
-      </Title>
-      <Navigation isOpen={isOpen} setIsOpen={setIsOpen} />
+      <TitleSection>
+        <Title>
+          <Link to="/" onClick={handleTitleClick}>
+            {TITLE}
+          </Link>
+        </Title>
+      </TitleSection>
+      <NavigationSection>
+        <Navigation isOpen={isOpen} setIsOpen={setIsOpen} />
+      </NavigationSection>
+      <ThemeButtonSection>
+        <ThemeButton />
+      </ThemeButtonSection>
     </Container>
   );
 };
@@ -51,6 +59,8 @@ const Container = styled.div`
   }
 `;
 
+const TitleSection = styled.section``;
+
 const Title = styled.div`
   a {
     font-family: 'Champagne';
@@ -66,5 +76,13 @@ const Title = styled.div`
       font-size: 18px;
       line-height: 22px;
     }
+  }
+`;
+
+const NavigationSection = styled.section``;
+
+const ThemeButtonSection = styled.section`
+  @media ${({ theme }) => theme.device.tablet} {
+    display: none;
   }
 `;
