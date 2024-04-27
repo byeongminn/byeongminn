@@ -133,7 +133,6 @@ const Chips = styled.div`
 const Chip = styled.div`
   padding-inline: 0.5rem;
   background-color: ${({ theme }) => theme.chipBgColor};
-  border: 1px solid ${({ theme }) => theme.chipBorderColor};
   border-radius: 10px;
   ${eng14};
   color: ${({ theme }) => theme.chipColor};
