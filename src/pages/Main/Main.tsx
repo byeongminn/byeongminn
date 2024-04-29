@@ -75,7 +75,7 @@ const moveToLeft = keyframes`
 `;
 
 const Container = styled.div`
-  height: calc(100dvh - 162px - 178px - 3rem);
+  height: calc(100dvh - 162px - 218px - 3rem);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;

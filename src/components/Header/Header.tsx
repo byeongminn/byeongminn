@@ -82,6 +82,8 @@ const Title = styled.div`
 const NavigationSection = styled.section``;
 
 const ThemeButtonSection = styled.section`
+  height: 1.5rem;
+
   @media ${({ theme }) => theme.device.tablet} {
     display: none;
   }
