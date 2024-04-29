@@ -33,9 +33,10 @@ export type Chip = {
 
 export type Project = {
   id: number;
-  logo: string;
+  thumbnail: string;
   title: string;
   chips: Array<Chip>;
+  directory: string;
   details: Details;
 };
 
@@ -76,7 +77,7 @@ export type Image = {
 };
 
 export type Details = {
-  thumbnail?: string;
+  cover?: string;
   overview?: string;
   background?: Array<string>;
   duration?: string;

@@ -3,12 +3,19 @@ import styled from 'styled-components';
 import { Details, List } from './components';
 import getProjects from 'services/projects/get-projects';
 import { Project } from 'types';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 const Projects = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
 
   const [projects, setProjects] = useState<Array<Project>>([]);
+
+  useEffect(() => {
+    if (Number.isNaN(Number(id))) {
+      navigate('/projects');
+    }
+  }, [id]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -25,7 +32,7 @@ const Projects = () => {
       </ListSection>
       <DetailsSection>
         {projects.length > 0 ? (
-          <Details details={projects[Number(id) || 0]?.details} />
+          <Details project={projects[Number(id) || 0]} />
         ) : null}
       </DetailsSection>
     </Container>

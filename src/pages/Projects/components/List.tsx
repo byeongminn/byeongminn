@@ -26,7 +26,34 @@ const ListComponent = ({ projects }: Props) => {
           }
           onClick={() => handleItemClick(project.id)}
         >
-          <Logo></Logo>
+          <Thumbnail>
+            <picture>
+              <source
+                srcSet={`/assets/pictures/${project.directory}/thumbnail-mobile.webp`}
+                type="image/webp"
+                media="(max-width: 767px)"
+                width={40}
+                height={40}
+              />
+              <source
+                srcSet={`/assets/pictures/${project.directory}/thumbnail-desktop.webp`}
+                type="image/webp"
+                media="(max-width: 991px)"
+                width={128}
+                height={96}
+              />
+              <source
+                srcSet={`/assets/pictures/${project.directory}/thumbnail-desktop.webp`}
+                type="image/webp"
+                width={192}
+                height={144}
+              />
+              <img
+                src={`/assets/pictures/${project.directory}/thumbnail.jpg`}
+                alt={project.thumbnail}
+              />
+            </picture>
+          </Thumbnail>
           <Content>
             <Title>{project.title}</Title>
             <Chips>
@@ -87,12 +114,14 @@ const ProjectItem = styled.div<{ $isActive: boolean }>`
   }
 `;
 
-const Logo = styled.div`
-  aspect-ratio: 4 / 3;
-  background-color: #e1e5ed;
+const Thumbnail = styled.div`
+  img {
+    width: 100%;
+  }
 
   @media ${({ theme }) => theme.device.mobile} {
     width: 2.5rem;
+    height: 2.5rem;
   }
 `;
 
