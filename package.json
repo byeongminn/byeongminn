@@ -1,6 +1,6 @@
 {
-  "name": "portfolio-template",
-  "homepage": "https://byeongminn.github.io/imjeon",
+  "name": "imjeon",
+  "homepage": "https://byeongminn.github.io/byeongminn",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
