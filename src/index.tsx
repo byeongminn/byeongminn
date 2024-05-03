@@ -12,7 +12,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <ThemeProvider>
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <GlobalStyle />
       <App />
     </BrowserRouter>
