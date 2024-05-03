@@ -4,158 +4,62 @@
     "company": "(주)스마트모빌러티",
     "position": "사원",
     "job": "웹 프론트엔드 개발",
-    "period": "2022.04 - 2024.01",
+    "duration": "2022.04 - 2024.01",
     "projects": [
       {
         "id": 0,
-        "logo": "LOGO",
         "title": "용역매칭서비스",
-        "period": "2023.12 - 2023.12",
         "roles": ["더미 데이터 생성 및 화면 개발", "UI의 전반적인 개발"],
-        "chips": [
-          {
-            "id": 0,
-            "name": "Chip1"
-          },
-          {
-            "id": 1,
-            "name": "Chip2"
-          },
-          {
-            "id": 2,
-            "name": "Chip3"
-          }
-        ],
-        "link": "/projects/0"
+        "link": ""
       },
       {
         "id": 1,
-        "logo": "LOGO",
         "title": "사내 관리 웹사이트 Billie 대규모 리뉴얼",
-        "period": "2023.10 - 2023.12",
         "roles": [
           "사용자의 불편함 수집 및 개선을 위한 기획 회의 참여",
           "UI의 전반적인 수정 및 개발",
           "사용자에게 보이는 모든 페이지 개발",
           "코드 리팩토링을 통한 효율적이고 유지 보수가 용이한 코드 베이스 구축"
         ],
-        "chips": [
-          {
-            "id": 0,
-            "name": "Chip1"
-          },
-          {
-            "id": 1,
-            "name": "Chip2"
-          },
-          {
-            "id": 2,
-            "name": "Chip3"
-          }
-        ],
-        "link": "http://192.168.0.141:3000"
+        "link": "/projects/1"
       },
       {
         "id": 2,
-        "logo": "LOGO",
         "title": "PIMA(Platform for IMpact Analysis) 웹 개발",
-        "period": "2022.12 - 2023.09",
         "roles": [
           "지도 라이브러리를 이용하여 데이터 분석 및 표출",
           "Geoserver 데이터베이스 구축",
           "UI의 전반적인 개발"
         ],
-        "chips": [
-          {
-            "id": 0,
-            "name": "Chip1"
-          },
-          {
-            "id": 1,
-            "name": "Chip2"
-          },
-          {
-            "id": 2,
-            "name": "Chip3"
-          }
-        ],
-        "link": "http://192.168.0.141:3000"
+        "link": "/projects/2"
       },
       {
         "id": 3,
-        "logo": "LOGO",
         "title": "경찰청 자율주행 웹 MVP 개발",
-        "period": "2022.10 - 2022.11",
         "roles": [
           "테스트베드 현장조사하여 OD(Origin-Destination) 데이터 수집",
           "화면 개발"
         ],
-        "chips": [
-          {
-            "id": 0,
-            "name": "Chip1"
-          },
-          {
-            "id": 1,
-            "name": "Chip2"
-          },
-          {
-            "id": 2,
-            "name": "Chip3"
-          }
-        ],
-        "link": "http://192.168.0.141:3000"
+        "link": ""
       },
       {
         "id": 4,
-        "logo": "LOGO",
         "title": "STOP BY(자동차 여행 모바일 웹 MVP) 개발",
-        "period": "2022.06 - 2022.07",
         "roles": [
           "UI의 전반적인 개발",
           "사용자에게 보이는 모든 페이지 화면 개발"
         ],
-        "chips": [
-          {
-            "id": 0,
-            "name": "Chip1"
-          },
-          {
-            "id": 1,
-            "name": "Chip2"
-          },
-          {
-            "id": 2,
-            "name": "Chip3"
-          }
-        ],
-        "link": "http://192.168.0.141:3000"
+        "link": "/projects/3"
       },
       {
         "id": 5,
-        "logo": "LOGO",
         "title": "사내 관리 웹사이트 Billie 개발, 배포 및 운영, 유지 보수",
-        "period": "2022.04 - 2022.11",
         "roles": [
           "사용자의 불편함 수집 및 개선을 위한 기획 회의 참여",
           "UI의 전반적인 개발",
           "사용자에게 보이는 모든 페이지 화면 개발"
         ],
-        "chips": [
-          {
-            "id": 0,
-            "name": "Chip1"
-          },
-          {
-            "id": 1,
-            "name": "Chip2"
-          },
-          {
-            "id": 2,
-            "name": "Chip3"
-          }
-        ],
-        "link": "http://192.168.0.141:3000"
+        "link": "/projects/4"
       }
     ]
   }
