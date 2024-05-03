@@ -18,7 +18,7 @@ const Footer = () => {
   return (
     <Container>
       <Copyright>
-        Copyright <strong>{profile.englishName}</strong> 2021-2024 All rights
+        Copyright <strong>{profile.englishName}</strong> 2024 All rights
         reserved.
       </Copyright>
     </Container>
