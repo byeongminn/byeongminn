@@ -1,0 +1,17 @@
+[
+  {
+    "id": 0,
+    "logo": "LOGO",
+    "title": "Billie",
+    "chips": [
+      {
+        "id": 0,
+        "name": "Web"
+      },
+      {
+        "id": 1,
+        "name": "Frontend"
+      }
+    ]
+  }
+]
