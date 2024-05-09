@@ -20,11 +20,11 @@ const ProjectComponent = ({ project }: Props) => {
             <ImageSection>
               <picture>
                 <source
-                  srcSet={`/assets/pictures/${project.directory}/cover.webp`}
+                  srcSet={`${process.env.PUBLIC_URL}/assets/pictures/${project.directory}/cover.webp`}
                   type="image/webp"
                 />
                 <img
-                  src={`/assets/pictures/${project.directory}/cover}.jpg`}
+                  src={`${process.env.PUBLIC_URL}/assets/pictures/${project.directory}/cover}.jpg`}
                   alt="image"
                 />
               </picture>

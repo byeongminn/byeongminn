@@ -25,7 +25,10 @@ const SkillsComponent = () => {
       <SectionContent>
         {skills.map(({ id, name }) => (
           <ContentItem key={id}>
-            <Image src={`/assets/icons/${name}-${theme}.svg`} alt={name} />
+            <Image
+              src={`${process.env.PUBLIC_URL}/assets/icons/${name}-${theme}.svg`}
+              alt={name}
+            />
             <h5>{name}</h5>
           </ContentItem>
         ))}

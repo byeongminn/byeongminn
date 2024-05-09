@@ -29,21 +29,21 @@ const ListComponent = ({ projects }: Props) => {
           <Thumbnail>
             <picture>
               <source
-                srcSet={`/assets/pictures/${project.directory}/thumbnail-mobile.svg`}
+                srcSet={`${process.env.PUBLIC_URL}/assets/pictures/${project.directory}/thumbnail-mobile.svg`}
                 type="image/svg+xml"
                 media="(max-width: 767px)"
                 width={40}
                 height={40}
               />
               <source
-                srcSet={`/assets/pictures/${project.directory}/thumbnail-tablet.svg`}
+                srcSet={`${process.env.PUBLIC_URL}/assets/pictures/${project.directory}/thumbnail-tablet.svg`}
                 type="image/svg+xml"
                 media="(max-width: 991px)"
                 width={128}
                 height={96}
               />
               <source
-                srcSet={`/assets/pictures/${project.directory}/thumbnail-desktop.svg`}
+                srcSet={`${process.env.PUBLIC_URL}/assets/pictures/${project.directory}/thumbnail-desktop.svg`}
                 type="image/svg+xml"
                 width={192}
                 height={144}

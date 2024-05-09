@@ -60,7 +60,7 @@ const ExperiencesComponent = () => {
                         {link ? (
                           <ProjectLink href={link}>
                             <img
-                              src={`/assets/icons/link-${theme}.svg`}
+                              src={`${process.env.PUBLIC_URL}/assets/icons/link-${theme}.svg`}
                               alt="link"
                             />
                           </ProjectLink>
@@ -78,7 +78,7 @@ const ExperiencesComponent = () => {
                           {link ? (
                             <ProjectLink href={link}>
                               <img
-                                src={`/assets/icons/link-${theme}.svg`}
+                                src={`${process.env.PUBLIC_URL}/assets/icons/link-${theme}.svg`}
                                 alt="link"
                               />
                             </ProjectLink>

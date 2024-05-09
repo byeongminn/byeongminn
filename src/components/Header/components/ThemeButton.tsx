@@ -8,9 +8,15 @@ const ThemeButton = () => {
   return (
     <Container onClick={handleThemeToggle}>
       {theme === 'dark' ? (
-        <Icon src="/assets/icons/light.svg" alt="light" />
+        <Icon
+          src={`${process.env.PUBLIC_URL}/assets/icons/light.svg`}
+          alt="light"
+        />
       ) : (
-        <Icon src="/assets/icons/dark.svg" alt="dark" />
+        <Icon
+          src={`${process.env.PUBLIC_URL}/assets/icons/dark.svg`}
+          alt="dark"
+        />
       )}
     </Container>
   );

@@ -51,7 +51,10 @@ const Navigation = ({ isOpen, setIsOpen }: Props) => {
       <ButtonSection>
         <ThemeButton />
         <NavButton onClick={handleNavButtonClick}>
-          <img src={`/assets/icons/nav-${theme}.svg`} alt="nav" />
+          <img
+            src={`${process.env.PUBLIC_URL}/assets/icons/nav-${theme}.svg`}
+            alt="nav"
+          />
         </NavButton>
       </ButtonSection>
       {isOpen ? (
