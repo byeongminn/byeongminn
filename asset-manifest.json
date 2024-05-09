@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/byeongminn/static/css/main.9d0607eb.css",
-    "main.js": "/byeongminn/static/js/main.e320f490.js",
+    "main.js": "/byeongminn/static/js/main.c49482ab.js",
     "static/js/453.c7159ef8.chunk.js": "/byeongminn/static/js/453.c7159ef8.chunk.js",
     "static/media/SpoqaHanSansNeo-Regular.woff": "/byeongminn/static/media/SpoqaHanSansNeo-Regular.a17cdabf37037c4e6e0d.woff",
     "static/media/SpoqaHanSansNeo-Medium.woff": "/byeongminn/static/media/SpoqaHanSansNeo-Medium.aec2b483e38d2b397651.woff",
@@ -15,11 +15,11 @@
     "static/media/ChampagneLimousines-Regular.woff2": "/byeongminn/static/media/ChampagneLimousines-Regular.3764530f591df5996913.woff2",
     "index.html": "/byeongminn/index.html",
     "main.9d0607eb.css.map": "/byeongminn/static/css/main.9d0607eb.css.map",
-    "main.e320f490.js.map": "/byeongminn/static/js/main.e320f490.js.map",
+    "main.c49482ab.js.map": "/byeongminn/static/js/main.c49482ab.js.map",
     "453.c7159ef8.chunk.js.map": "/byeongminn/static/js/453.c7159ef8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9d0607eb.css",
-    "static/js/main.e320f490.js"
+    "static/js/main.c49482ab.js"
   ]
 }
