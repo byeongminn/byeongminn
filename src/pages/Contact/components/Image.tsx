@@ -14,7 +14,9 @@ const ImageComponent = () => {
     fetchData();
   }, []);
 
-  return image.url ? <Img src={image.url} /> : null;
+  return image.url ? (
+    <Img src={`${process.env.PUBLIC_URL}/${image.url}`} />
+  ) : null;
 };
 
 export default ImageComponent;
