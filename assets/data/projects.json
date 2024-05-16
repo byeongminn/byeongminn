@@ -35,7 +35,8 @@
       ],
       "performance": [
         "Typescript로 개발하면서 타입의 종류와 사용 방법을 배웠고, 타입 정의의 중요성과 유지 관리의 필요성을 깨달음",
-        "styled-components 라이브러리의 ThemeProvider를 처음 사용하면서 테마를 한 곳에서 중앙 집중적으로 관리할 수 있음을 알았고, 이를 통해 다크 모드와 라이트 모드를 간편하게 전환할 수 있었음"
+        "styled-components 라이브러리의 ThemeProvider를 처음 사용하면서 테마를 한 곳에서 중앙 집중적으로 관리할 수 있음을 알았고, 이를 통해 다크 모드와 라이트 모드를 간편하게 전환할 수 있었음",
+        "gh-pages 라이브러리를 통해 'https://byeongminn.github.io/byeongminn' 배포"
       ]
     }
   },
@@ -133,7 +134,7 @@
       ],
       "performance": [
         "프로젝트 준공",
-        "cafe24를 통해 http://krripima.re.kr 홈페이지 배포",
+        "cafe24를 통해 'http://krripima.re.kr' 홈페이지 배포",
         "Openlayers 라이브러리를 이용하여 웹으로 지도 서비스를 개발할 수 있게 됨",
         "Vworld 등 오픈 API를 능숙하게 활용할 수 있게 됨",
         "QGIS, Geoserver 등 지리정보시스템을 능숙하게 다룰 수 있게 됨"
@@ -227,7 +228,7 @@
         "지속적인 피드백 및 개선"
       ],
       "performance": [
-        "사내 서버를 이용하여 http://www.billie.work 홈페이지 배포",
+        "사내 서버를 이용하여 'http://www.billie.work' 홈페이지 배포",
         "기존에 수기로 처리되던 업무들을 Biliie로 이관하여 업무 처리에 효율성을 향상시킴",
         "코드의 비효율성과 Sass의 불편함을 인지하고, 업무 외 시간을 활용하여 리팩토링을 진행",
         "서비스를 처음 배포 및 운영함으로써 사용자는 개발자의 생각대로 행동하지 않음을 깨닫고 예외 처리에 더욱 꼼꼼히 신경 쓰게 됨",
