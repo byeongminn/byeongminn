@@ -87,6 +87,10 @@ export type Details = {
   role?: Array<string>;
   collaboration?: Array<string>;
   performance?: Array<string>;
+  output?: {
+    thumbnail: string;
+    pdf: string;
+  };
 };
 
 export type Theme = 'light' | 'dark';

@@ -1,4 +1,4 @@
-import { eng14, eng16, kor14, kor16, kor20 } from 'constants/fonts';
+import { eng14, eng16, eng20, kor14, kor16, kor20 } from 'constants/fonts';
 import React from 'react';
 import styled from 'styled-components';
 import { Project } from 'types';
@@ -95,6 +95,13 @@ const ProjectComponent = ({ project }: Props) => {
                 ))}
               </ContentWrapper>
             ) : null}
+            {project.details.output ? (
+              <ContentWrapper>
+                <A href={`${process.env.PUBLIC_URL}/${project.details.output}`}>
+                  OUTPUT
+                </A>
+              </ContentWrapper>
+            ) : null}
           </ContentSection>
           <ButtonSection>
             <Button onClick={handleTopClick}>TOP</Button>
@@ -150,6 +157,17 @@ const P = styled.p`
 
   @media ${({ theme }) => theme.device.tablet} {
     ${kor14};
+  }
+`;
+
+const A = styled.a`
+  ${eng20};
+  color: ${({ theme }) => theme.sectionColor};
+  text-decoration: underline;
+
+  @media ${({ theme }) => theme.device.tablet} {
+    ${eng16};
+    font-weight: 500;
   }
 `;
 
