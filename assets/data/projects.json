@@ -89,7 +89,8 @@
         "사용자의 경험을 개선하여 직원들의 근태와 기자재 관리를 체계적으로 지원",
         "UI 개선 및 코드 리팩토링을 통해 플랫폼의 성능 및 확장성을 증진",
         "함수의 Parameter 값 전달에 있어 타입 정리의 필요성을 느껴 Typescript를 학습하고 이를 다음 프로젝트에 적용"
-      ]
+      ],
+      "output": "https://drive.google.com/file/d/1gNPiYY6l2efCUyEMXSkOUk60V2TkrAgf/view?usp=sharing"
     }
   },
   {
@@ -138,7 +139,8 @@
         "Openlayers 라이브러리를 이용하여 웹으로 지도 서비스를 개발할 수 있게 됨",
         "Vworld 등 오픈 API를 능숙하게 활용할 수 있게 됨",
         "QGIS, Geoserver 등 지리정보시스템을 능숙하게 다룰 수 있게 됨"
-      ]
+      ],
+      "output": "https://drive.google.com/file/d/1w5g3XnqRkST-LdFBuIlxubigMmA3ulBZ/view?usp=sharing"
     }
   },
   {
@@ -184,7 +186,8 @@
         "오픈 API인 Kakao 지도 API를 활용하여 지도 컨텐츠 기능 개발",
         "클라이언트의 요구사항은 언제든 바뀔 수 있으며 터무니없는 요구를 할 수도 있음을 깨달음",
         "정해진 기간 내에 클라이언트의 모든 요구사항을 수용하기에는 어려움으로 중간 합의점을 찾는 것이 중요함을 깨달음"
-      ]
+      ],
+      "output": "https://drive.google.com/file/d/1xPuKT63C9FBTFBUe9zD2xJ8Tk9yrFitf/view?usp=sharing"
     }
   },
   {
@@ -234,7 +237,8 @@
         "서비스를 처음 배포 및 운영함으로써 사용자는 개발자의 생각대로 행동하지 않음을 깨닫고 예외 처리에 더욱 꼼꼼히 신경 쓰게 됨",
         "사용자의 직급에 따라 다른 요구사항이 있음을 인지하여 기획 및 UI 수정 후 유지 보수 진행",
         "문서화의 중요성을 깨닫고, 팀 내에서 효율적인 정보 공유를 위해 Notion과 Slack을 도입"
-      ]
+      ],
+      "output": "https://drive.google.com/file/d/1Kywn88UkBMCghBKb6o1b-5Ctk8D7o1uZ/view?usp=sharing"
     }
   }
 ]
