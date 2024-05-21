@@ -31,6 +31,9 @@ export const light: DefaultTheme = {
   chipColor: palette.gray600,
   chipBgColor: palette.gray300,
   chipBorderColor: palette.gray300,
+  outputColor: palette.gray600,
+  outputBgColor: '#ffffff',
+  outputBorderColor: palette.gray600,
   footerColor: palette.gray600,
 };
 
@@ -52,5 +55,8 @@ export const dark: DefaultTheme = {
   chipColor: palette.gray300,
   chipBgColor: palette.gray800,
   chipBorderColor: palette.gray800,
+  outputColor: palette.gray300,
+  outputBgColor: palette.gray800,
+  outputBorderColor: palette.gray300,
   footerColor: palette.gray600,
 };

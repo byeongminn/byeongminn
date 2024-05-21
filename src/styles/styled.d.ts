@@ -19,6 +19,9 @@ declare module 'styled-components' {
     chipColor: string;
     chipBgColor: string;
     chipBorderColor: string;
+    outputColor: string;
+    outputBgColor: string;
+    outputBorderColor: string;
     footerColor: string;
   }
 
