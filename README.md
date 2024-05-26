@@ -14,7 +14,7 @@ Here are some ideas to get you started:
 -->
 <div align="center">
   <h3>👋 I'M JEON</h3>
-  <h4>끊임없이 고민하고 배움으로써 성장하는 웹 프론트엔드 개발자입니다.</h4>
+  <h4>끊임없이 고민하고 배우며 성장하는, 프론트엔드 개발자 전병민입니다.</h4>
 </div>
 <br />
 <div align="center">
