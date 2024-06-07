@@ -36,4 +36,5 @@ Here are some ideas to get you started:
 <div align="center">
   <h3>🎨 Portfolio</h3>
   <h4>https://byeongminn.github.io/byeongminn/</h4>
+  <h6>(repo : https://github.com/byeongminn/byeongminn/tree/v2)</h6>
 </div>
