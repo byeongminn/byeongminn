@@ -1,10 +1,10 @@
-export type Profile = {
-  name?: string;
-  englishName?: string;
-  birth?: string;
-  address?: string;
-  number?: string;
-  email?: string;
+export type ProfileType = {
+  name: string;
+  englishName: string;
+  birth: string;
+  address: string;
+  number: string;
+  email: string;
 };
 
 export type Skill = {

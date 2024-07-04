@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /** Pretendard **/
+  /* Regular */
+  @font-face {
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 400;
+    src:
+      url('/assets/fonts/Pretendard-Regular.woff2') format('woff2'),
+      url('/assets/fonts/Pretendard-Regular.woff') format('woff');
+  }
+  /* Medium */
+  @font-face {
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 500;
+    src:
+      url('/assets/fonts/Pretendard-Medium.woff2') format('woff2'),
+      url('/assets/fonts/Pretendard-Medium.woff') format('woff');
+  }
+  /** SpoqaHanSansNeo **/
+  /* Regular */
+  @font-face {
+    font-family: 'Spoqa';
+    font-style: normal;
+    font-weight: 400;
+    src:
+      url('/assets/fonts/SpoqaHanSansNeo-Regular.woff2') format('woff2'),
+      url('/assets/fonts/SpoqaHanSansNeo-Regular.woff') format('woff');
+  }
+  /* Medium */
+  @font-face {
+    font-family: 'Spoqa';
+    font-style: normal;
+    font-weight: 500;
+    src:
+      url('/assets/fonts/SpoqaHanSansNeo-Medium.woff2') format('woff2'),
+      url('/assets/fonts/SpoqaHanSansNeo-Medium.woff') format('woff');
+  }
+  /** ChampagneLimousines **/
+  /* Regular */
+  @font-face {
+    font-family: 'Champagne';
+    font-style: normal;
+    font-weight: 400;
+    src:
+      url('/assets/fonts/ChampagneLimousines-Regular.woff2') format('woff2'),
+      url('/assets/fonts/ChampagneLimousines-Regular.woff') format('woff');
+  }
+}
