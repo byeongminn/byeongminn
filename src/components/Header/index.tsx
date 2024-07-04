@@ -22,7 +22,7 @@ export const Header = () => {
 
   return (
     <>
-      <div className="px-4 py-6 laptop:py-14 flex laptop:flex-col justify-between laptop:justify-center items-center gap-y-0 laptop:gap-y-4 bg-white dark:bg-[#1f1f1f] border-b-[1px] border-gray-700 dark:border-gray-100 fixed laptop:static top-0 inset-x-0 z-[1000]">
+      <div className="px-4 py-6 laptop:py-14 flex laptop:flex-col justify-between laptop:justify-center items-center gap-y-0 laptop:gap-y-4 bg-white dark:bg-[#1f1f1f] border-b-[1px] border-gray-700 dark:border-gray-100 laptop:border-none fixed laptop:static top-0 inset-x-0 z-[1000]">
         <Link
           href="/"
           className="font-champagne italic text-[18px] laptop:text-[32px] leading-[22px] laptop:leading-[30px] tracking-[3px] text-gray-900 dark:text-gray-100 uppercase"
