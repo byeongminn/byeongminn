@@ -26,6 +26,32 @@ module.exports = {
         'gray-800': '#333333',
         'gray-900': '#191919',
       },
+      keyframes: {
+        'fade-in': {
+          '0%': { opacity: 0 },
+          '100%': { opacity: 1 },
+        },
+        'fade-out': {
+          '0%': { opacity: 1 },
+          '100%': { opacity: 0 },
+        },
+        left: {
+          '0%': {},
+          '100%': { left: 0 },
+        },
+        'fade-left': {
+          '0%': { opacity: 0, transform: 'translateX(48px)' },
+          '100%': { opacity: 1, transform: 'translateX(0px)' },
+        },
+      },
+      animation: {
+        keep: 'fade-in 1.5s 1.5s forwards, left 1.5s 1.5s forwards',
+        imje: 'fade-in 1.5s, fade-out 0.5s 1.5s forwards',
+        on: 'fade-in 1.5s forwards, left 1.5s 1.5s forwards',
+        growing: 'fade-in 1.5s 3s forwards',
+        job: 'fade-left 1.5s 4s forwards',
+        name: 'fade-left 1.5s 5s forwards',
+      },
     },
     screens: {
       tablet: '768px',
