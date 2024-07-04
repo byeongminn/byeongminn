@@ -1,15 +1,11 @@
 import { ProfileType } from '@/types';
-import axios from 'axios';
+import { fetchData } from '@/utils/fetcher';
 import { useQuery } from 'react-query';
 
 export const Footer = () => {
-  const fetchProfile = async () => {
-    const { data } = await axios('/api/profile');
-
-    return data;
-  };
-
-  const { data: profile } = useQuery<ProfileType>('profile', fetchProfile);
+  const { data: profile } = useQuery<ProfileType>('profile', () =>
+    fetchData('profile'),
+  );
 
   return (
     <div className="py-[72px]">

@@ -1,5 +1,5 @@
 import { ProfileType } from '@/types';
-import axios from 'axios';
+import { fetchData } from '@/utils/fetcher';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -12,13 +12,9 @@ export const Header = () => {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
-  const fetchProfile = async () => {
-    const { data } = await axios('/api/profile');
-
-    return data;
-  };
-
-  const { data: profile } = useQuery<ProfileType>('profile', fetchProfile);
+  const { data: profile } = useQuery<ProfileType>('profile', () =>
+    fetchData('profile'),
+  );
 
   return (
     <>

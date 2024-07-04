@@ -7,31 +7,30 @@ export type ProfileType = {
   email: string;
 };
 
-export type Skill = {
+export type SkillType = {
   id: number;
-  iconUrl: string;
   name: string;
 };
 
-export type Introduction = {
+export type IntroductionType = {
   id: number;
   title: string;
   content: string;
 };
 
-export type Education = {
+export type EducationType = {
   id: number;
   school: string;
   major: string;
   period: string;
 };
 
-export type Chip = {
+export type ChipType = {
   id: number;
   name: string;
 };
 
-export type Project = {
+export type ProjectType = {
   id: number;
   thumbnail: string;
   title: string;
@@ -40,7 +39,7 @@ export type Project = {
   details: Details;
 };
 
-export type Experience = {
+export type ExperienceType = {
   id: number;
   company: string;
   position: string;

@@ -10,6 +10,12 @@ module.exports = {
   ],
   theme: {
     extend: {
+      flexGrow: {
+        2: '2',
+        3: '3',
+        4: '4',
+        8: '8',
+      },
       fontFamily: {
         pretendard: 'Pretendard',
         spoqa: 'Spoqa',
@@ -75,6 +81,10 @@ module.exports = {
         },
         '.text-kor-16': {
           '@apply font-spoqa font-normal text-base leading-6 tracking-[-0.5px]':
+            '',
+        },
+        '.text-kor-16M': {
+          '@apply font-spoqa font-medium text-base leading-6 tracking-[-0.5px]':
             '',
         },
         '.text-kor-18': {
