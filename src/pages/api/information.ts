@@ -5,9 +5,9 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {
-  const result = (await import(
-    '../../../public/assets/data/profile.json'
-  )) as ProfileType;
+  const { type } = req.query;
 
-  return res.status(200).json(result);
+  const result = await import(`../../../public/assets/data/${type}.json`);
+
+  return res.status(200).json(result.default);
 }
