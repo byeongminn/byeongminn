@@ -10,6 +10,7 @@ export type ProfileType = {
 export type SkillType = {
   id: number;
   name: string;
+  icon: string;
 };
 
 export type IntroductionType = {
@@ -91,5 +92,3 @@ export type DetailsType = {
     pdf: string;
   };
 };
-
-export type Theme = 'light' | 'dark';

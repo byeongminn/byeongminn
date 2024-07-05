@@ -42,7 +42,7 @@ export const ProjectDetail = () => {
           <Link
             href={`${project?.details?.output}`}
             target="_blank"
-            className="px-2 py-1 bg-white dar:bg-gray-800 border border-gray-600 dark:border-gray-300 rounded-full text-eng-14M laptop:text-eng-16 text-gray-600 dark:text-gray-300"
+            className="px-2 py-1 bg-white dark:bg-gray-800 border border-gray-600 dark:border-gray-300 rounded-full text-eng-14M laptop:text-eng-16 text-gray-600 dark:text-gray-300"
           >
             OUTPUT
           </Link>

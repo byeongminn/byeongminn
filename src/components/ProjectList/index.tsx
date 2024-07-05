@@ -15,7 +15,7 @@ export const ProjectList = () => {
   );
 
   return (
-    <div className="pb-5 tablet:pb-0 tablet:pr-4 laptop:pr-8 flex tablet:flex-col gap-x-5 tablet:gap-y-6 tablet:border-r overflow-x-auto tablet:overflow-visible">
+    <div className="pb-5 tablet:pb-0 tablet:pr-4 laptop:pr-8 flex tablet:flex-col gap-x-5 tablet:gap-y-6 tablet:border-r dark:border-gray-700 overflow-x-auto tablet:overflow-visible">
       {projects?.map((project) => (
         <div
           key={project.id}
