@@ -8,3 +8,4 @@ export * from './Experiences';
 export * from './Education';
 export * from './ProjectList';
 export * from './ProjectDetail';
+export * from './Links';

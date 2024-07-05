@@ -60,7 +60,7 @@ export type Award = {
   outcome: string;
 };
 
-export type More = {
+export type LinkType = {
   id: number;
   name: string;
   url: string;
