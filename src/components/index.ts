@@ -6,3 +6,5 @@ export * from './Skills';
 export * from './Introduction';
 export * from './Experiences';
 export * from './Education';
+export * from './ProjectList';
+export * from './ProjectDetail';

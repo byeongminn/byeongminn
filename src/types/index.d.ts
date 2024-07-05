@@ -36,7 +36,7 @@ export type ProjectType = {
   title: string;
   chips: Array<Chip>;
   directory: string;
-  details: Details;
+  details: DetailsType;
 };
 
 export type ExperienceType = {
@@ -75,7 +75,7 @@ export type Image = {
   url?: string;
 };
 
-export type Details = {
+export type DetailsType = {
   cover?: string;
   overview?: string;
   background?: Array<string>;

@@ -28,19 +28,19 @@ export const Header = () => {
         <div className="pl-4 hidden laptop:flex justify-center items-center gap-x-5">
           <Link
             href="/about"
-            className={`text-eng-16 ${pathname.includes('/about') ? 'text-gray-900' : 'text-gray-600'} uppercase`}
+            className={`text-eng-16 ${pathname?.includes('/about') ? 'text-gray-900' : 'text-gray-600'} uppercase`}
           >
             about
           </Link>
           <Link
             href="/projects"
-            className={`text-eng-16 ${pathname.includes('/projects') ? 'text-gray-900' : 'text-gray-600'} uppercase`}
+            className={`text-eng-16 ${pathname?.includes('/projects') ? 'text-gray-900' : 'text-gray-600'} uppercase`}
           >
             projects
           </Link>
           <Link
             href="/contact"
-            className={`text-eng-16 ${pathname.includes('/contact') ? 'text-gray-900' : 'text-gray-600'} uppercase`}
+            className={`text-eng-16 ${pathname?.includes('/contact') ? 'text-gray-900' : 'text-gray-600'} uppercase`}
           >
             contact
           </Link>
@@ -81,21 +81,21 @@ export const Header = () => {
                 <Link
                   href="/about"
                   onClick={() => setIsOpen(false)}
-                  className={`text-eng-16 ${pathname.includes('/about') ? 'text-gray-900' : 'text-gray-600'} uppercase`}
+                  className={`text-eng-16 ${pathname?.includes('/about') ? 'text-gray-900' : 'text-gray-600'} uppercase`}
                 >
                   about
                 </Link>
                 <Link
                   href="/projects"
                   onClick={() => setIsOpen(false)}
-                  className={`text-eng-16 ${pathname.includes('/projects') ? 'text-gray-900' : 'text-gray-600'} uppercase`}
+                  className={`text-eng-16 ${pathname?.includes('/projects') ? 'text-gray-900' : 'text-gray-600'} uppercase`}
                 >
                   projects
                 </Link>
                 <Link
                   href="/contact"
                   onClick={() => setIsOpen(false)}
-                  className={`text-eng-16 ${pathname.includes('/contact') ? 'text-gray-900' : 'text-gray-600'} uppercase`}
+                  className={`text-eng-16 ${pathname?.includes('/contact') ? 'text-gray-900' : 'text-gray-600'} uppercase`}
                 >
                   contact
                 </Link>
