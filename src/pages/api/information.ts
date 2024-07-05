@@ -1,4 +1,3 @@
-import { ProfileType } from '@/types';
 import { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(
