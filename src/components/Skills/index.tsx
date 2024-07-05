@@ -1,9 +1,12 @@
 import { SkillType } from '@/types';
 import { fetchData } from '@/utils/fetcher';
+import { useTheme } from 'next-themes';
 import Image from 'next/image';
 import { useQuery } from 'react-query';
 
 export const Skills = () => {
+  const { resolvedTheme } = useTheme();
+
   const { data: skills } = useQuery<SkillType[]>('skills', () =>
     fetchData('skills'),
   );
@@ -14,13 +17,13 @@ export const Skills = () => {
         Skills
       </h2>
       <div className="flex laptop:flex-col items-center laptop:items-start flex-wrap laptop:flex-nowrap gap-x-4 gap-y-3 laptop:gap-y-2">
-        {skills?.map(({ id, name }) => (
+        {skills?.map(({ id, name, icon }) => (
           <div
             key={id}
-            className="flex items-center gap-x-2 laptop:gap-x-3 text-eng-14 laptop:text-eng-16 text-gray-800 dark:text-gray-500 capitalize"
+            className="flex items-center gap-x-2 laptop:gap-x-3 text-eng-14 laptop:text-eng-16 text-gray-800 dark:text-gray-500"
           >
             <Image
-              src={`/assets/icons/${name}-light.svg`}
+              src={`/assets/icons/${icon}-${resolvedTheme}.svg`}
               alt={name}
               width={24}
               height={24}

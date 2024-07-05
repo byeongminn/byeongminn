@@ -14,7 +14,7 @@ export default function ContactPage() {
           alt="image"
           fill
           priority
-          objectFit="cover"
+          className="object-cover"
         />
       </div>
     </div>

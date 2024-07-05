@@ -1,10 +1,13 @@
 import { ExperienceType } from '@/types';
 import { fetchData } from '@/utils/fetcher';
+import { useTheme } from 'next-themes';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useQuery } from 'react-query';
 
 export const Experiences = () => {
+  const { resolvedTheme } = useTheme();
+
   const { data: experiences } = useQuery<ExperienceType[]>('experiences', () =>
     fetchData('experiences'),
   );
@@ -62,7 +65,7 @@ export const Experiences = () => {
                   {link ? (
                     <Link href={link}>
                       <Image
-                        src="/assets/icons/link-light.svg"
+                        src={`/assets/icons/link-${resolvedTheme}.svg`}
                         alt="link"
                         width={24}
                         height={24}
@@ -88,7 +91,7 @@ export const Experiences = () => {
                     {link && (
                       <Link href={link}>
                         <Image
-                          src="/assets/icons/link-light.svg"
+                          src={`/assets/icons/link-${resolvedTheme}.svg`}
                           alt="link"
                           width={24}
                           height={24}
