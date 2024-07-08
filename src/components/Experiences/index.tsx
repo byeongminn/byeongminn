@@ -8,8 +8,12 @@ import { useQuery } from 'react-query';
 export const Experiences = () => {
   const { resolvedTheme } = useTheme();
 
-  const { data: experiences } = useQuery<ExperienceType[]>('experiences', () =>
-    fetchData('experiences'),
+  const { data: experiences } = useQuery<ExperienceType[]>(
+    'experiences',
+    () => fetchData('experiences'),
+    {
+      refetchOnWindowFocus: false,
+    },
   );
 
   return (

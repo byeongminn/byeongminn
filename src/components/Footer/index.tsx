@@ -3,8 +3,12 @@ import { fetchData } from '@/utils/fetcher';
 import { useQuery } from 'react-query';
 
 export const Footer = () => {
-  const { data: profile } = useQuery<ProfileType>('profile', () =>
-    fetchData('profile'),
+  const { data: profile } = useQuery<ProfileType>(
+    'profile',
+    () => fetchData('profile'),
+    {
+      refetchOnWindowFocus: false,
+    },
   );
 
   return (

@@ -15,7 +15,7 @@ export const ProjectDetail = () => {
     return data;
   };
 
-  const { data: project } = useQuery<ProjectType>(
+  const { data: project, isLoading } = useQuery<ProjectType>(
     `projects-${id}`,
     fetchProject,
     { refetchOnWindowFocus: false },
@@ -24,6 +24,8 @@ export const ProjectDetail = () => {
   const handleTopClick = () => {
     window.scrollTo(0, 0);
   };
+
+  if (isLoading) return;
 
   return project ? (
     <div className="flex-1 flex flex-col gap-y-4">

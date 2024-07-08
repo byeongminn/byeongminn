@@ -29,8 +29,12 @@ export const Header = () => {
     };
   }, [isOpen]);
 
-  const { data: profile } = useQuery<ProfileType>('profile', () =>
-    fetchData('profile'),
+  const { data: profile } = useQuery<ProfileType>(
+    'profile',
+    () => fetchData('profile'),
+    {
+      refetchOnWindowFocus: false,
+    },
   );
 
   return (
