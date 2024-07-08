@@ -2,6 +2,7 @@ import { Layout } from '@/components';
 import '@/styles/globals.css';
 import { ThemeProvider } from 'next-themes';
 import type { AppProps } from 'next/app';
+import Head from 'next/head';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools';
 
@@ -12,7 +13,12 @@ export default function App({ Component, pageProps }: AppProps) {
     <QueryClientProvider client={queryClient}>
       <ThemeProvider attribute="class">
         <Layout>
-          <Component {...pageProps} />
+          <>
+            <Head>
+              <title>I'M JEON</title>
+            </Head>
+            <Component {...pageProps} />
+          </>
         </Layout>
         <ReactQueryDevtools />
       </ThemeProvider>

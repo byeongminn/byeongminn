@@ -4,7 +4,6 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <title>I'M JEON</title>
         <meta
           name="description"
           content="끊임없이 고민하고 배우며 성장하는 프론트엔드 개발자, 전병민 포트폴리오"
