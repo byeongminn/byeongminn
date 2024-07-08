@@ -7,8 +7,12 @@ import { useQuery } from 'react-query';
 export const Skills = () => {
   const { resolvedTheme } = useTheme();
 
-  const { data: skills } = useQuery<SkillType[]>('skills', () =>
-    fetchData('skills'),
+  const { data: skills } = useQuery<SkillType[]>(
+    'skills',
+    () => fetchData('skills'),
+    {
+      refetchOnWindowFocus: false,
+    },
   );
 
   return (

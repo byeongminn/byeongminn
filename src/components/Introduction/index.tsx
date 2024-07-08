@@ -6,6 +6,9 @@ export const Introduction = () => {
   const { data: introduction } = useQuery<IntroductionType>(
     'introduction',
     () => fetchData('introduction'),
+    {
+      refetchOnWindowFocus: false,
+    },
   );
 
   return (
