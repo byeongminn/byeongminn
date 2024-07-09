@@ -1,0 +1,57 @@
+[
+  {
+    "id": 0,
+    "name": "Next.JS",
+    "icon": "nextjs"
+  },
+  {
+    "id": 1,
+    "name": "React",
+    "icon": "react"
+  },
+  {
+    "id": 2,
+    "name": "Typescript",
+    "icon": "typescript"
+  },
+  {
+    "id": 3,
+    "name": "Javascript",
+    "icon": "javascript"
+  },
+  {
+    "id": 4,
+    "name": "Tailwind CSS",
+    "icon": "tailwindcss"
+  },
+  {
+    "id": 5,
+    "name": "Styled-components",
+    "icon": "styledcomponents"
+  },
+  {
+    "id": 6,
+    "name": "Git",
+    "icon": "git"
+  },
+  {
+    "id": 7,
+    "name": "Github",
+    "icon": "github"
+  },
+  {
+    "id": 8,
+    "name": "Notion",
+    "icon": "notion"
+  },
+  {
+    "id": 9,
+    "name": "Slack",
+    "icon": "slack"
+  },
+  {
+    "id": 10,
+    "name": "Figma",
+    "icon": "figma"
+  }
+]

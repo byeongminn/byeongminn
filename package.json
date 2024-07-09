@@ -1,6 +1,6 @@
 {
   "name": "imjeon",
-  "homepage": "https://byeongminn.github.io/byeongminn/",
+  "homepage": "https://byeongminn.vercel.app/",
   "version": "2.0.0",
   "private": true,
   "dependencies": {
