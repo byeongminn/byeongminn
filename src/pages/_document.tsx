@@ -16,10 +16,7 @@ export default function Document() {
           content="끊임없이 고민하고 배우며 성장하는 프론트엔드 개발자, 전병민 포트폴리오"
         />
         <meta property="og:image" content="%PUBLIC_URL%/assets/meta/og.png" />
-        <meta
-          property="og:url"
-          content="https://byeongminn.github.io/byeongminn/"
-        />
+        <meta property="og:url" content="https://byeongminn.vercel.app/" />
         <meta name="twitter:title" content="I'M JEON" />
         <meta
           name="twitter:description"
