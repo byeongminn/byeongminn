@@ -154,7 +154,7 @@ export const ProjectDetail = () => {
         {project?.details?.performance?.length && (
           <div className="flex flex-col gap-y-1 break-keep">
             <h2 className="text-kor-16M laptop:text-kor-20 text-gray-900 dark:text-gray-400">
-              성과 및 배운 점
+              성과 및 회고
             </h2>
             {project?.details?.performance.map((item, index) => (
               <p
