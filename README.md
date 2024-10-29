@@ -26,9 +26,10 @@ Here are some ideas to get you started:
   <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=Next.js&logoColor=ffffff" height=20/>
   <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=white" height=20>
   <br />
+  <img src="https://img.shields.io/badge/React_query-FF4154?style=for-the-badge&logo=reactquery&logoColor=ffffff" height=20/>
+  <img src="https://img.shields.io/badge/React_hook_form-EC5990?style=for-the-badge&logo=reacthookform&logoColor=ffffff" height=20/>
   <img src="https://img.shields.io/badge/styled components-DB7093?style=for-the-badge&logo=Styled-Components&logoColor=white" height=20>
   <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=TailwindCSS&logoColor=ffffff" height=20/>
-  <img src="https://img.shields.io/badge/React_hook_form-EC5990?style=for-the-badge&logo=reacthookform&logoColor=ffffff" height=20/>
   <br />
   <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" height=20/>
   <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=white" height=20/>
@@ -36,8 +37,8 @@ Here are some ideas to get you started:
   <img src="https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=Slack&logoColor=white" height=20/>
   <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=ffffff" height=20/>
   <br />
-  <h6>Learning</h6>
-  <img src="https://img.shields.io/badge/React_query-FF4154?style=for-the-badge&logo=reactquery&logoColor=ffffff" height=20/>
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=Docker&logoColor=ffffff" height=20/>
+  <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=Amazon-Web-Services&logoColor=ffffff" height=20/>
 </div>
 <br />
 <div align="center">
