@@ -14,7 +14,7 @@ Here are some ideas to get you started:
 -->
 <div align="center">
   <h3>👋 I'M JEON</h3>
-  <h4>끊임없이 고민하고 배우며 성장하는, 프론트엔드 개발자 전병민입니다.</h4>
+  <h4>사용자 경험을 개선하고 성능 최적화에 집중하는 프론트엔드 개발자 전병민입니다.</h4>
 </div>
 <br />
 <div align="center">
@@ -43,6 +43,6 @@ Here are some ideas to get you started:
 <br />
 <div align="center">
   <h3>🎨 Portfolio</h3>
-  <h4>https://byeongminn.vercel.app/</h4>
-  <h6>(repo : https://github.com/byeongminn/byeongminn/tree/v3)</h6>
+  <h4>https://byeongmin-portfolio.vercel.app/</h4>
+  <h6>(repo : https://github.com/byeongminn/portfolio)</h6>
 </div>
