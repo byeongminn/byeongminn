@@ -39,6 +39,10 @@ Here are some ideas to get you started:
   <br />
   <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=Docker&logoColor=ffffff" height=20/>
   <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=Amazon-Web-Services&logoColor=ffffff" height=20/>
+
+  <h6>Learning</h6>
+  <img src="https://img.shields.io/badge/MSW-FF6A33?style=for-the-badge&logo=MockServiceWorker&logoColor=ffffff" height=20/>
+  <img src="https://img.shields.io/badge/Storybook-FF4685?style=for-the-badge&logo=Storybook&logoColor=ffffff" height=20/>
 </div>
 <br />
 <div align="center">
