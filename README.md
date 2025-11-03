@@ -44,9 +44,3 @@ Here are some ideas to get you started:
   <img src="https://img.shields.io/badge/MSW-FF6A33?style=for-the-badge&logo=MockServiceWorker&logoColor=ffffff" height=20/>
   <img src="https://img.shields.io/badge/Storybook-FF4685?style=for-the-badge&logo=Storybook&logoColor=ffffff" height=20/>
 </div>
-<br />
-<div align="center">
-  <h3>🎨 Portfolio</h3>
-  <h4>https://byeongmin-portfolio.vercel.app/</h4>
-  <h6>(repo : https://github.com/byeongminn/portfolio)</h6>
-</div>
